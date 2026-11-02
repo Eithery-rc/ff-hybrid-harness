@@ -1,0 +1,68 @@
+# explore_map.txt - find the city map in the C02RB hideout (frames every game second, a log line per try).
+# The city map lies on a table to the LEFT of Mr. Jones (who stands behind the central table in front
+# of the start position); walk up to it, face it, press E. E near Mr. Jones himself starts his dialogue.
+# Tries 1-6 approach that table; the rest are the earlier fallbacks (the board by the flag, behind on the left).
+wait_scene FF-Intro
+at 12 key ESCAPE
+wait_scene FF-Startup
+at 10 key RETURN
+at 20 key RIGHT
+at 24 key RETURN
+at 40 key RETURN
+at 41 log save started
+wait_scene FF-C02RB_MAIN
+at 40 log control
+at 42.0 down W
+at 42.6 up W
+at 45.0 log try 1: walked to the central table (no E: that would start Mr. Jones' dialogue)
+at 49.0 mouse -100 0
+at 50.0 down W
+at 50.8 up W
+at 52.0 key E
+at 52.0 log try 2: turn a little left, walk, E
+at 56.0 down W
+at 56.5 up W
+at 59.0 key E
+at 59.0 log try 3: walk on, E
+at 63.0 mouse -100 0
+at 64.0 down W
+at 64.5 up W
+at 66.0 key E
+at 66.0 log try 4: turn left again, walk, E
+at 70.0 down A
+at 70.8 up A
+at 73.0 key E
+at 73.0 log try 5: strafe left, E
+at 77.0 mouse 60 0
+at 80.0 key E
+at 80.0 log try 6: face right a little, E
+at 84.0 mouse -300 0
+at 87.0 key E
+at 87.0 log try 7: turn left 90, E
+at 91.0 down W
+at 91.8 up W
+at 94.0 key E
+at 94.0 log try 8: walk, E
+at 98.0 mouse -150 0
+at 101.0 key E
+at 101.0 log try 9: turn left 45, E
+at 105.0 down W
+at 105.8 up W
+at 108.0 key E
+at 108.0 log try 10: walk, E
+at 112.0 down S
+at 112.8 up S
+at 115.0 key E
+at 115.0 log try 11: back, E
+at 119.0 mouse 600 0
+at 122.0 key E
+at 122.0 log try 12: turn right 180, E
+at 126.0 down W
+at 126.8 up W
+at 129.0 key E
+at 129.0 log try 13: walk, E
+at 133.0 down W
+at 133.8 up W
+at 136.0 key E
+at 136.0 log try 14: walk, E
+at 144.0 log explore done

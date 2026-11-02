@@ -1,0 +1,15 @@
+# skip_intro.txt - from game start to the front-end main menu, nothing selected there.
+#
+# Tested 2026-10-22 on the vanilla game at time_scale 4 (frames from the loader's frame_dump). Times are seconds on the
+# loader's clock (real time x time_scale), counted from the last satisfied wait_scene. Scene names are the
+# Scenes\*.zip paths the game opens (the "scene:" lines in ff_hybrid.log).
+# Real order: FF-Intro (logos, then the opening cinematic), StartLoader, FF-Startup (the main menu, START highlighted).
+# One ESC in FF-Intro skips the rest of it: FF-Startup opens about 5 s later instead of about 150 s.
+# Do not press ESC or RETURN after that: RETURN on the menu starts a new game (see to_level1.txt).
+
+wait_scene FF-Intro
+at 12 key ESCAPE
+at 13 log intro skipped
+
+wait_scene FF-Startup
+at 10 log main menu reached

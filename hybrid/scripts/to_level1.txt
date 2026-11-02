@@ -1,0 +1,54 @@
+# to_level1.txt - from game start to gameplay in the first single-player mission (C01A), then a few steps.
+#
+# Tested 2026-10-22 on the vanilla game (zero hooks) at time_scale 4 with frame_dump, Russian menus, 1280x720
+# windowed, off-screen. Times are seconds on the loader's clock (real time x time_scale), counted from the last
+# satisfied wait_scene. Keyboard only: every menu here is driven by the arrows and RETURN, and opens with a sensible
+# item highlighted.
+#
+# Flow (scene lines as in ff_hybrid.log):
+#   FF-Intro.ZIP            logos, then the opening cinematic; ESC skips straight to the menu
+#   StartLoader.ZIP, FF-Startup.ZIP   main menu: START* OPTIONS EXIT CREDITS
+#   RETURN                  player profile: NEW* LOAD DELETE, BACK
+#   RETURN                  difficulty: 4 lines, the 3rd (Freedom Fighter) highlighted; UP UP = the easiest
+#   RETURN                  new game: name "FREEDOM FIGHTER" (default), START GAME*, BACK
+#   RETURN                  a profile with that name exists after the first run: "overwrite?" NO* YES,
+#                           so RIGHT RETURN; on a machine without it these two presses fall on the autosave screen
+#   Cutscenes/MovieCuts/FF_MC01A/FF_MC01A_MAIN.ZIP   intro movie, ESC skips it
+#   Singleplayer/C01A/Loader.ZIP, SinglePlayer/C01A/FF-C01A_MAIN.ZIP   the mission; control about 4 s later
+# Each run writes Profiles\FREEDOM FIGHTER.dat in %APPDATA%\IO Interactive\Freedom Fighters (a fresh new game).
+# Vanilla timing at x4: FF-C01A_MAIN at about t=140 from the start.
+
+wait_scene FF-Intro
+at 12 key ESCAPE
+at 13 log intro skipped
+
+wait_scene FF-Startup
+at 10 key RETURN
+at 11 log main menu: start
+at 20 key RETURN
+at 21 log profile: new
+at 30 key UP
+at 32 key UP
+at 36 key RETURN
+at 37 log difficulty: the easiest
+at 46 key RETURN
+at 47 log new game: start game with the default name
+at 56 key RIGHT
+at 58 key RETURN
+at 59 log overwrite prompt: yes
+
+wait_scene FF_MC01A_MAIN
+at 10 key ESCAPE
+at 11 log movie cut skipped
+
+wait_scene FF-C01A_MAIN
+at 20 log level: walking
+at 20 down W
+at 23 up W
+at 25 mouse 400 0
+at 27 down W
+at 30 up W
+at 32 mouse -400 0
+at 34 down S
+at 36 up S
+at 40 log level: idle from here

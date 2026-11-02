@@ -1,0 +1,323 @@
+# c02rb_hub.txt - shadow capture scenario: load a profile copy (--profile-file, saved after
+# mission 1) from the main menu: profile screen RIGHT (LOAD), RETURN on the save. The save starts in the C02RB
+# sewer hideout; then about 6 game minutes of wandering with E and RETURN presses (talk to the NPCs, try the
+# city map; entering the next mission from the map is not scripted yet). Generated with a fixed seed.
+
+wait_scene FF-Intro
+at 12 key ESCAPE
+wait_scene FF-Startup
+at 10 key RETURN
+at 20 key RIGHT
+at 24 key RETURN
+at 40 key RETURN
+at 41 log save started
+
+wait_scene FF-C02RB_MAIN
+at 40 log hideout: control
+at 42.0 key RETURN
+at 44.0 down S
+at 45.0 up S
+at 45.5 key RETURN
+at 47.5 key RETURN
+at 49.5 down S
+at 50.5 up S
+at 51.0 key C
+at 52.0 mouse -200 0
+at 53.0 down S
+at 54.0 up S
+at 54.5 key RETURN
+at 56.5 key 3
+at 57.5 down A
+at 58.7 up A
+at 59.2 key RETURN
+at 61.2 mouse -200 0
+at 62.2 down W
+at 64.7 up W
+at 65.2 key 1
+at 66.2 key C
+at 67.2 key E
+at 69.2 key RETURN
+at 71.2 key 3
+at 72.2 key C
+at 73.2 key 1
+at 74.2 key C
+at 75.2 down W
+at 77.7 up W
+at 78.2 down W
+at 79.0 up W
+at 79.5 down W
+at 80.3 up W
+at 80.8 mouse -400 0
+at 81.8 key RETURN
+at 83.8 key E
+at 85.8 key RETURN
+at 87.8 key C
+at 88.8 mouse -200 0
+at 89.8 key 2
+at 90.8 key RETURN
+at 92.8 down W
+at 95.3 up W
+at 95.8 down W
+at 97.3 up W
+at 97.8 key 2
+at 98.8 key E
+at 100.8 down S
+at 101.8 up S
+at 102.3 down W
+at 104.8 up W
+at 105.3 mouse 200 0
+at 106.3 mouse 200 0
+at 107.3 down W
+at 108.1 up W
+at 108.6 key C
+at 109.6 down W
+at 111.1 up W
+at 111.6 down W
+at 113.1 up W
+at 113.6 key E
+at 115.6 down W
+at 116.4 up W
+at 116.9 key 1
+at 117.9 mouse -200 0
+at 118.9 down W
+at 120.4 up W
+at 120.9 key E
+at 122.9 key E
+at 124.9 key E
+at 126.9 down W
+at 129.4 up W
+at 129.9 key 1
+at 130.9 key 2
+at 131.9 key E
+at 133.9 down W
+at 135.4 up W
+at 135.9 key E
+at 137.9 down W
+at 139.4 up W
+at 139.9 down W
+at 140.7 up W
+at 141.2 mouse -400 0
+at 142.2 down W
+at 143.0 up W
+at 143.5 key RETURN
+at 145.5 key RETURN
+at 147.5 down A
+at 148.7 up A
+at 149.2 key RETURN
+at 151.2 down S
+at 152.2 up S
+at 152.7 mouse -200 0
+at 153.7 key E
+at 155.7 key 2
+at 156.7 down W
+at 158.2 up W
+at 158.7 key E
+at 160.7 mouse -400 0
+at 161.7 mouse 200 0
+at 162.7 down W
+at 163.5 up W
+at 164.0 down D
+at 165.2 up D
+at 165.7 key C
+at 166.7 key 3
+at 167.7 down W
+at 168.5 up W
+at 169.0 down A
+at 170.2 up A
+at 170.7 key RETURN
+at 172.7 mouse -400 0
+at 173.7 key C
+at 174.7 key E
+at 176.7 mouse 400 0
+at 177.7 down W
+at 178.5 up W
+at 179.0 down W
+at 179.8 up W
+at 180.3 key C
+at 181.3 key 1
+at 182.3 down W
+at 184.8 up W
+at 185.3 key E
+at 187.3 key E
+at 189.3 key C
+at 190.3 key RETURN
+at 192.3 down D
+at 193.5 up D
+at 194.0 key C
+at 195.0 down D
+at 196.2 up D
+at 196.7 down A
+at 197.9 up A
+at 198.4 mouse -200 0
+at 199.4 key C
+at 200.4 mouse -200 0
+at 201.4 down A
+at 202.6 up A
+at 203.1 key 2
+at 204.1 key RETURN
+at 206.1 key C
+at 207.1 down W
+at 208.6 up W
+at 209.1 down W
+at 209.9 up W
+at 210.4 down W
+at 211.2 up W
+at 211.7 down S
+at 212.7 up S
+at 213.2 mouse -200 0
+at 214.2 key E
+at 216.2 mouse 400 0
+at 217.2 key C
+at 218.2 key RETURN
+at 220.2 mouse -200 0
+at 221.2 down W
+at 222.0 up W
+at 222.5 mouse 400 0
+at 223.5 down S
+at 224.5 up S
+at 225.0 key 3
+at 226.0 key C
+at 227.0 down W
+at 228.5 up W
+at 229.0 mouse -200 0
+at 230.0 down W
+at 230.8 up W
+at 231.3 mouse 400 0
+at 232.3 key RETURN
+at 234.3 mouse -400 0
+at 235.3 down W
+at 236.1 up W
+at 236.6 mouse 200 0
+at 237.6 down S
+at 238.6 up S
+at 239.1 key C
+at 240.1 down A
+at 241.3 up A
+at 241.8 key E
+at 243.8 down D
+at 245.0 up D
+at 245.5 key E
+at 247.5 key 3
+at 248.5 down S
+at 249.5 up S
+at 250.0 key C
+at 251.0 down A
+at 252.2 up A
+at 252.7 down W
+at 254.2 up W
+at 254.7 key E
+at 256.7 mouse -400 0
+at 257.7 down W
+at 260.2 up W
+at 260.7 key 1
+at 261.7 key RETURN
+at 263.7 down W
+at 266.2 up W
+at 266.7 mouse 200 0
+at 267.7 down A
+at 268.9 up A
+at 269.4 down W
+at 270.9 up W
+at 271.4 down S
+at 272.4 up S
+at 272.9 key E
+at 274.9 down W
+at 277.4 up W
+at 277.9 down D
+at 279.1 up D
+at 279.6 key E
+at 281.6 down W
+at 284.1 up W
+at 284.6 key RETURN
+at 286.6 down W
+at 288.1 up W
+at 288.6 down W
+at 290.1 up W
+at 290.6 key C
+at 291.6 down W
+at 294.1 up W
+at 294.6 key 2
+at 295.6 key E
+at 297.6 key C
+at 298.6 down W
+at 301.1 up W
+at 301.6 down W
+at 302.4 up W
+at 302.9 down W
+at 305.4 up W
+at 305.9 down W
+at 307.4 up W
+at 307.9 key E
+at 309.9 key E
+at 311.9 key E
+at 313.9 key C
+at 314.9 key RETURN
+at 316.9 key RETURN
+at 318.9 key RETURN
+at 320.9 down S
+at 321.9 up S
+at 322.4 down W
+at 324.9 up W
+at 325.4 down S
+at 326.4 up S
+at 326.9 down W
+at 328.4 up W
+at 328.9 key C
+at 329.9 down W
+at 331.4 up W
+at 331.9 down W
+at 332.7 up W
+at 333.2 down W
+at 334.7 up W
+at 335.2 key C
+at 336.2 key 2
+at 337.2 mouse -400 0
+at 338.2 key E
+at 340.2 mouse -200 0
+at 341.2 key 3
+at 342.2 mouse -200 0
+at 343.2 key E
+at 345.2 key 2
+at 346.2 key RETURN
+at 348.2 mouse 200 0
+at 349.2 key E
+at 351.2 key 2
+at 352.2 mouse 400 0
+at 353.2 mouse -200 0
+at 354.2 key E
+at 356.2 mouse 200 0
+at 357.2 mouse -200 0
+at 358.2 down D
+at 359.4 up D
+at 359.9 key E
+at 361.9 down W
+at 364.4 up W
+at 364.9 down W
+at 366.4 up W
+at 366.9 down A
+at 368.1 up A
+at 368.6 key RETURN
+at 370.6 key RETURN
+at 372.6 mouse -200 0
+at 373.6 key E
+at 375.6 key E
+at 377.6 key 3
+at 378.6 key RETURN
+at 380.6 key 2
+at 381.6 key C
+at 382.6 key RETURN
+at 384.6 key E
+at 386.6 down W
+at 387.4 up W
+at 387.9 mouse -400 0
+at 388.9 key 3
+at 389.9 mouse 200 0
+at 390.9 mouse -400 0
+at 391.9 key 1
+at 392.9 key E
+at 394.9 key RETURN
+at 396.9 mouse -400 0
+at 397.9 mouse -200 0
+at 398.9 down A
+at 400.1 up A
+at 402.6 log wander done

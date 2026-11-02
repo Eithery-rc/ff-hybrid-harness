@@ -1,0 +1,6 @@
+# tested with pefile 2024.8.26, capstone 5.0.9, unicorn 2.1.4, psutil 7.2.2, pycaw 20260927
+pefile
+capstone
+unicorn
+psutil
+pycaw   # only for hybrid/mute_game.py

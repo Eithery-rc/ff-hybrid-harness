@@ -1,0 +1,14 @@
+/game/
+/game_w*/
+/ReFreedomFighters/
+/.venv/
+/hybrid/build/
+/hybrid/test/out/
+__pycache__/
+*.pyc
+*.obj
+*.dll
+*.exe
+*.bin
+*.ffs
+*.bmp

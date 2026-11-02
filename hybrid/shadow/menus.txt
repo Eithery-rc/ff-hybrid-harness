@@ -1,0 +1,20 @@
+# menus.txt - shadow capture scenario: intro skipped, then the main menu down to the new-game name screen, without
+# pressing START GAME, so no profile is written (to_level1.txt writes Profiles\FREEDOM FIGHTER.dat; a hunt may be
+# using it at the same time). Menu flow and timings from hybrid/scripts/to_level1.txt.
+
+wait_scene FF-Intro
+at 12 key ESCAPE
+at 13 log intro skipped
+
+wait_scene FF-Startup
+at 10 key RETURN
+at 11 log main menu: start
+at 20 key RETURN
+at 21 log profile: new
+at 30 key UP
+at 32 key UP
+at 36 key RETURN
+at 37 log difficulty: the easiest
+at 46 key DOWN
+at 50 key UP
+at 52 log name screen reached; nothing more is pressed

@@ -1,0 +1,129 @@
+"""align_exclude.py - exe addresses to leave unhooked because their port can reach a stack-alignment hazard.
+
+plan.py (written to build/align_hazards.tsv) lists port functions that use aligned SSE stack ops and do not
+realign the stack. The game only guarantees a 4-byte aligned stack, so such a function faults when it runs on a
+stack nobody realigned. Every function built with -mstackrealign (see build_all.py) realigns on entry and shields
+everything it calls, so a hazard function is only exposed along call chains made of functions that do not realign.
+
+For each hazard function this walks the callers up through the image (direct call/jmp, and code that takes the
+function's address), stops at callers that realign, and collects the exe addresses whose port entry is on a walked
+function. Those go to build/align_exclude.txt, in the format hooks.ini's exclude_file reads (hex, '#' comments).
+Calls through tables (vtables, callbacks) cannot be followed; the number of such references is printed.
+
+Usage: python -I hybrid/align_exclude.py [--build hybrid/build]
+"""
+import argparse
+import bisect
+import collections
+import os
+import re
+import struct
+
+import capstone
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+BASE = 0x31000000
+IMM_RE = re.compile(r'0x[0-9a-f]{8}\b')
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--build', default=os.path.join(HERE, 'build'))
+    ap.add_argument('--out', default=None)
+    a = ap.parse_args()
+    out = a.out or os.path.join(a.build, 'align_exclude.txt')
+    img = open(os.path.join(a.build, 'ff_ports.bin'), 'rb').read()
+    syms = [l.split() for l in open(os.path.join(a.build, 'ff_ports.syms'))]
+    syms = [(int(s[0], 16), s[1], s[2]) for s in syms if len(s) == 3]
+    pcs = [v for v, _, n in syms if n.startswith('pc_')]
+    code_end = min(pcs)                       # pc_ tables are .rodata, laid out after all code
+    entries = collections.defaultdict(list)   # port entry -> [(exe addr, name)]
+    for line in open(os.path.join(a.build, 'ff_ports.tsv'), encoding='utf-8'):
+        p = line.rstrip('\n').split('\t')
+        entries[int(p[1], 16)].append((int(p[0], 16), p[3]))
+    hazards = []
+    for line in list(open(os.path.join(a.build, 'align_hazards.tsv')))[1:]:
+        p = line.split()
+        if p:
+            hazards.append(int(p[0], 16))
+    fname = {}
+    for v, t, n in syms:
+        if v < code_end and t in 'TtW':
+            fname.setdefault(v, n)
+    starts = sorted(set(fname) | set(entries))
+    starts = [s for s in starts if BASE <= s < code_end]
+
+    def fn_of(addr):
+        return starts[max(bisect.bisect_right(starts, addr) - 1, 0)]
+
+    startset = set(starts)
+    md = capstone.Cs(capstone.CS_ARCH_X86, capstone.CS_MODE_32)
+    md.skipdata = True
+    callers = collections.defaultdict(set)    # callee fn -> {caller fn}
+    realign = set()
+    for addr, size, mn, op in md.disasm_lite(img[:code_end - BASE], BASE):
+        f = fn_of(addr)
+        if mn == 'and' and op.startswith('esp, 0xfffffff'):
+            realign.add(f)
+            continue
+        if mn in ('call', 'jmp') and op.startswith('0x'):
+            try:
+                t = int(op, 16)
+            except ValueError:
+                continue
+            if t in startset and t != f:
+                callers[t].add(f)
+        elif '0x3' in op:
+            for m in IMM_RE.findall(op):
+                t = int(m, 16)
+                if t in startset and t != f:       # code that takes the address of a function
+                    callers[t].add(f)
+    # references from data (vtables, callback tables), pc_ entries excluded: cannot be followed
+    pcset = set(pcs)
+    table_refs = collections.Counter()
+    for off in range(code_end - BASE, len(img) - 3, 4):
+        if BASE + off in pcset:
+            continue
+        v = struct.unpack_from('<I', img, off)[0]
+        if v in startset:
+            table_refs[v] += 1
+
+    chosen = {}                                # exe addr -> (comment, depth)
+    for h in hazards:
+        seen, front, depth = {h: 0}, [h], 0
+        while front:
+            depth += 1
+            nxt = []
+            for n in front:
+                for c in callers.get(n, ()):
+                    if c in seen or c in realign:
+                        continue
+                    seen[c] = depth
+                    nxt.append(c)
+            front = nxt
+        for fn, d in seen.items():
+            for exe, nm in entries.get(fn, ()):
+                why = ('port entry is the hazard fn %s' % fname.get(h, hex(h))) if fn == h else \
+                      ('port entry reaches hazard fn %s (%#x) through %d unrealigned call(s)' % (fname.get(h, hex(h)), h, d))
+                if exe not in chosen or d < chosen[exe][1]:
+                    chosen[exe] = ('%s: %s' % (nm[:60], why), d)
+    with open(out, 'w', encoding='utf-8') as f:
+        f.write('# exe addresses left unhooked because their port can run an aligned-SSE hazard function on an\n')
+        f.write('# unaligned stack. Generated by hybrid/align_exclude.py from build/align_hazards.tsv.\n')
+        for exe in sorted(chosen):
+            f.write('0x%x  # %s\n' % (exe, chosen[exe][0]))
+    direct = sum(1 for e, (_, d) in chosen.items() if d == 0)
+    print('hazard functions: %d; realigning functions in image: %d' % (len(hazards), len(realign)))
+    print('exe addresses excluded: %d (%d are the hazard function itself, %d reach it through callers)' % (
+        len(chosen), direct, len(chosen) - direct))
+    nt = sum(1 for h in hazards if table_refs.get(h))
+    print('hazard functions also referenced from data tables (not followed): %d' % nt)
+    for h in hazards:
+        print('  %#x %-40s entry-of %d exe addrs, %d callers%s' % (
+            h, fname.get(h, '?')[:40], len(entries.get(h, ())), len(callers.get(h, ())),
+            ', %d table refs' % table_refs[h] if table_refs.get(h) else ''))
+    print('wrote', out)
+
+
+if __name__ == '__main__':
+    main()

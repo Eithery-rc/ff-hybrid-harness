@@ -1,0 +1,1283 @@
+# exclude_map.txt - exclude_level2.txt without the 8 exclusions I guessed by hand on 2026-10-23 during the C02RB
+# map crashes (0x576e50 0x5adee0 0x5b0f20 0x42abbd 0x42abee 0x4261c0 0x576a30 0x575f90): the hunt over
+# hybrid/scripts/c02rb_police.txt finds the real culprits and appends them here.
+# exclude_level2.txt: exclude_level.txt minus the 266 ports fixed on branch hybrid-fixes (hybrid/build/fixed_v3.txt, pilot mismatches kept)
+# night exclude list, 2026-10-22
+# align hazards (hybrid/build/align_exclude.txt)
+0x43a130  # GUESS FUN_43a130: port entry is the hazard fn GUESS_43a130
+0x49bbc0  # GUESS FUN_49bbc0: port entry is the hazard fn GUESS_49bbc0
+0x521f90  # effect_update: port entry is the hazard fn fn_521f90
+0x52a370  # GUESS lifted 0x52a370: port entry is the hazard fn lifted_52a370
+0x5544f0  # GUESS FUN_5544f0: port entry is the hazard fn GUESS_5544f0
+0x559a10  # GUESS FUN_559a10: port entry is the hazard fn GUESS_559a10
+0x5f37f0  # GUESS lifted 0x5f37f0: port entry is the hazard fn lifted_5f37f0
+0x6097d0  # GUESS FUN_6097d0: port entry is the hazard fn GUESS_6097d0
+0x60c100  # GUESS FUN_60c100: port entry is the hazard fn GUESS_60c100
+0x617400  # GUESS FUN_617400: port entry is the hazard fn GUESS_617400
+0x6183a0  # GUESS FUN_6183a0: port entry is the hazard fn GUESS_6183a0
+0x61b1e0  # GUESS FUN_61b1e0: port entry is the hazard fn GUESS_61b1e0
+0x61b570  # GUESS FUN_61b570: port entry is the hazard fn GUESS_61b570
+0x636de0  # GUESS FUN_636de0: port entry is the hazard fn GUESS_636de0
+0x65b550  # GUESS FUN_65b550: port entry is the hazard fn GUESS_65b550
+# whole folder inline-casc-h1: culprits 0x445c50 ZCAMERA::CurrentRoom and 0x565a30 CBootMenu::CopyEventDataBlock came from it; specs compare nothing
+0x410100
+0x420060
+0x4234e0
+0x4247e0
+0x425150
+0x428af0
+0x429b00
+0x42ab49
+0x42ac71
+0x42b0f0
+0x42c0a0
+0x42f880
+0x430c70
+0x431270
+0x431760
+0x435fa0
+0x438d50
+0x4454a0
+0x445c50
+0x447640
+0x44bca0
+0x44c930
+0x44ca70
+0x44d520
+0x4529e0
+0x454d30
+0x459b90
+0x45b910
+0x45bee0
+0x45c3a0
+0x45ede0
+0x45f060
+0x45f3a0
+0x45fa70
+0x45fc80
+0x4616b0
+0x461970
+0x462460
+0x4625c0
+0x462a70
+0x462ad0
+0x462d30
+0x463320
+0x463990
+0x463fc0
+0x465870
+0x465890
+0x466360
+0x466470
+0x466600
+0x4666d0
+0x466830
+0x4669c0
+0x466b70
+0x466d80
+0x466d90
+0x4673f0
+0x467710
+0x467f60
+0x468310
+0x468a20
+0x46a940
+0x46aa00
+0x46ac30
+0x46b700
+0x46c7d0
+0x46c910
+0x46c970
+0x46ca10
+0x46cdc0
+0x46ce40
+0x46d8c0
+0x46e410
+0x46e590
+0x46e680
+0x46e6f0
+0x46e720
+0x46eaa0
+0x46ee00
+0x46ee50
+0x46efa0
+0x46efe0
+0x46f240
+0x46f5d0
+0x4706a0
+0x470bf0
+0x470c50
+0x4711d0
+0x4714d0
+0x471670
+0x471840
+0x471f60
+0x472450
+0x472fd0
+0x473910
+0x4739e0
+0x473fb0
+0x474440
+0x474470
+0x4744c0
+0x475380
+0x475980
+0x4760d0
+0x4762a0
+0x476350
+0x476500
+0x476a20
+0x478620
+0x478640
+0x478e90
+0x47be00
+0x47fa50
+0x47fbe0
+0x47fd30
+0x480620
+0x483de0
+0x485f00
+0x486020
+0x4863c0
+0x4873f0
+0x487440
+0x487550
+0x489490
+0x48b530
+0x48f500
+0x48f580
+0x490d10
+0x490fa0
+0x4920e0
+0x493020
+0x494000
+0x496ce0
+0x497450
+0x498960
+0x49b340
+0x49cb80
+0x4a1850
+0x4a2ff0
+0x4a7960
+0x4afec0
+0x4b00d0
+0x4b07c0
+0x4b0ba0
+0x4b0c80
+0x4b1c20
+0x4b8b50
+0x4bb600
+0x4be6d0
+0x4bf4b0
+0x4bf4f0
+0x4c0940
+0x4c0a90
+0x4c1e20
+0x4c21e0
+0x4c2240
+0x4c2480
+0x4c48a0
+0x4c5700
+0x4c59d0
+0x4c59f0
+0x4c62c0
+0x4c6310
+0x4c8340
+0x4cafb0
+0x4cb110
+0x4cc690
+0x4cd2d0
+0x4cd950
+0x4ce850
+0x4ce960
+0x4cf5c0
+0x4cfd90
+0x4d06a0
+0x4d0ee0
+0x4d0f80
+0x4d1dd0
+0x4d1e10
+0x4d3a20
+0x4d3b10
+0x4d3d90
+0x4d4940
+0x4d4a30
+0x4d5570
+0x4d5c20
+0x4d5de0
+0x4d6e70
+0x4d92e0
+0x4dae40
+0x4dc420
+0x4dc600
+0x4dcd10
+0x4dcdf0
+0x4dd8f0
+0x4e0e60
+0x4e11d0
+0x4e4890
+0x4e5000
+0x4e50c0
+0x4e5470
+0x4e54a0
+0x4e6880
+0x4e8160
+0x4e8380
+0x4ea280
+0x4eb060
+0x4ecb00
+0x4ee1b0
+0x4ef1c0
+0x4f03c0
+0x4f0b70
+0x4f0bd0
+0x4f1070
+0x4f2610
+0x4f3c30
+0x4f3e80
+0x4f4550
+0x4f45a0
+0x4f4700
+0x4f4ba0
+0x4f4d00
+0x4f5990
+0x4f63b0
+0x4f75a0
+0x4f7900
+0x4f7a20
+0x4f8420
+0x4f8f80
+0x4f90b0
+0x4f97f0
+0x4f9f40
+0x4fa1d0
+0x4fc0d0
+0x4fc130
+0x4fcfd0
+0x4febf0
+0x500450
+0x501e40
+0x5095b0
+0x50b7f0
+0x50d810
+0x50ff80
+0x513180
+0x514b90
+0x516230
+0x5186c0
+0x518730
+0x5187d0
+0x519da0
+0x51b0e0
+0x51bd30
+0x51c520
+0x51d0d0
+0x51e840
+0x51ec40
+0x520d50
+0x521970
+0x522820
+0x522910
+0x5255d0
+0x52aa90
+0x52b370
+0x52b3e0
+0x52cf10
+0x52d190
+0x5308e0
+0x531810
+0x532730
+0x5332d0
+0x533310
+0x5333e0
+0x533b80
+0x533bc0
+0x533cc0
+0x533d20
+0x533fc0
+0x534090
+0x534190
+0x534cf0
+0x534d30
+0x534d60
+0x5366f0
+0x536870
+0x536c40
+0x537310
+0x538040
+0x538300
+0x539730
+0x5398c0
+0x539be0
+0x53b6d0
+0x53b860
+0x545d10
+0x5490f0
+0x5493f0
+0x54a5e0
+0x54a640
+0x54ba10
+0x54ba20
+0x54bbc0
+0x54bda0
+0x54c480
+0x54db80
+0x54dc40
+0x54dd00
+0x54e080
+0x54e0a0
+0x54e1c0
+0x54e900
+0x54e9d0
+0x54f1a0
+0x551080
+0x553dd0
+0x5578d0
+0x5592f0
+0x5595c0
+0x55b300
+0x55c7a0
+0x55c8e0
+0x55cc00
+0x5603e0
+0x561c40
+0x561e80
+0x564e40
+0x564fd0
+0x566ee0
+0x569410
+0x56ba00
+0x56c550
+0x56ce70
+0x56dd20
+0x56fc20
+0x571bf0
+0x578bb0
+0x578d20
+0x578db0
+0x579ca0
+0x57a9f0
+0x57aa80
+0x57b670
+0x57bcb0
+0x57c1d0
+0x57d830
+0x57f400
+0x589f70
+0x58a360
+0x591f00
+0x596760
+0x5968c0
+0x597930
+0x597980
+0x597a20
+0x597e00
+0x59a800
+0x59ad30
+0x59b3b0
+0x59d370
+0x5a45c0
+0x5a5f00
+0x5a5f40
+0x5a7550
+0x5aa020
+0x5aa060
+0x5aa6e0
+0x5aabe0
+0x5ab4b0
+0x5ab4c0
+0x5ad2b0
+0x5aedb0
+0x5aefc0
+0x5aeff0
+0x5af170
+0x5af260
+0x5afbb0
+0x5b0290
+0x5b04a0
+0x5b07d0
+0x5b5370
+0x5b7580
+0x5bc4b0
+0x5be190
+0x5bf940
+0x5bf9b0
+0x5bfa80
+0x5c2c80
+0x5c3d90
+0x5c65e0
+0x5c7ac0
+0x5c7c80
+0x5c7ed0
+0x5c7f10
+0x5c82a0
+0x5c97f0
+0x5cfae0
+0x5d0080
+0x5d02d0
+0x5d34a0
+0x5d4610
+0x5d5970
+0x5d5c90
+0x5d6240
+0x5d8840
+0x5d9180
+0x5dbc20
+0x5dd020
+0x5dd5e0
+0x5df6c0
+0x5df720
+0x5df850
+0x5e05a0
+0x5e1040
+0x5e7150
+0x5e9070
+0x5e9b40
+0x5eaf80
+0x5ed340
+0x5eeb10
+0x5eeb90
+0x5eebc0
+0x5ef1e0
+0x5f0160
+0x5f1680
+0x5f16c0
+0x5f23f0
+0x5f2840
+0x5f28d0
+0x5f2af0
+0x5f2ea0
+0x5f2f70
+0x5f3010
+0x5f3240
+0x5f3320
+0x5f3fc0
+0x5f40a0
+0x5f4600
+0x5f5050
+0x5f9570
+0x5f9b80
+0x5fb330
+0x5fb5b0
+0x5fd120
+0x5fd630
+0x5fe920
+0x5ffbc0
+0x601520
+0x601a60
+0x602d80
+0x604090
+0x6057a0
+0x606d60
+0x606db0
+0x607200
+0x607910
+0x60ed60
+0x60fd70
+0x60ff30
+0x613350
+0x614e50
+0x614ee0
+0x6154b0
+0x615560
+0x615ed0
+0x615ee0
+0x61be30
+0x61cce0
+0x623010
+0x623b80
+0x624490
+0x6244e0
+0x626a80
+0x628eb0
+0x629480
+0x62ad10
+0x62c730
+0x62c9b0
+0x62cc50
+0x62cce0
+0x62cf40
+0x62d7f0
+0x62da10
+0x62ddb0
+0x62f120
+0x62f980
+0x630070
+0x6301a0
+0x6352a0
+0x6361e0
+0x6362d0
+0x6364e0
+0x6392b0
+0x639ba0
+0x639c40
+0x63ad70
+0x63cc40
+0x63dac0
+0x63eab0
+0x63ec50
+0x63f090
+0x63fc20
+0x63fd80
+0x642120
+0x645c10
+0x645c30
+0x6482a0
+0x6487a0
+0x64a7f0
+0x64c750
+0x64f8a0
+0x64fac0
+0x64fb70
+0x64fc20
+0x64fd60
+0x651010
+0x654720
+0x654a20
+0x654d00
+0x655b40
+0x656320
+0x6566e0
+0x656760
+0x656e20
+0x656f60
+0x657820
+0x657940
+0x6580e0
+0x658140
+0x658ca0
+0x659330
+0x659b10
+0x659b60
+0x65a490
+0x65cb00
+0x65f0f0
+0x65f580
+# audit findings (hybrid/build/audit_exclude*.txt), hard and soft
+0x40b6f0
+0x40cc20
+0x410100
+0x41ce80
+0x41e340
+0x41eac0
+0x420060
+0x4248e0
+0x428960
+0x4298b0
+0x42b9c0
+0x430910
+0x430960
+0x430fc0
+0x431110
+0x43a380
+0x43cfc0
+0x4414a0
+0x441530
+0x4422e0
+0x442380
+0x442e20
+0x442ec0
+0x444fe0
+0x445180
+0x445c50
+0x445d50
+0x446d70
+0x44e970
+0x457c30
+0x45b620
+0x45c4f0
+0x45edb0
+0x45edd0
+0x45ede0
+0x45f030
+0x45f050
+0x45f060
+0x45fc80
+0x4632c0
+0x463f60
+0x463fc0
+0x4667e0
+0x468310
+0x471630
+0x471640
+0x472450
+0x476dc0
+0x478640
+0x478700
+0x479620
+0x490470
+0x4905c0
+0x490650
+0x4906f0
+0x490790
+0x490830
+0x490920
+0x490a00
+0x490b30
+0x490c60
+0x490de0
+0x490e70
+0x490f10
+0x4910b0
+0x4912a0
+0x4913d0
+0x491470
+0x491500
+0x4915a0
+0x497450
+0x49c770
+0x49e670
+0x49f9b0
+0x4a0150
+0x4a0d00
+0x4ac120
+0x4b0620
+0x4b7240
+0x4b73f0
+0x4bbe50
+0x4bc910
+0x4bf4b0
+0x4bf4c0
+0x4bf4e0
+0x4bf4f0
+0x4bf520
+0x4c09d0
+0x4c4df0
+0x4ccdd0
+0x4cd300
+0x4cfce0
+0x4d1b00
+0x4d1d70
+0x4d2b20
+0x4d39a0
+0x4d3a20
+0x4d4590
+0x4d5c20
+0x4d5de0
+0x4d6e70
+0x4dc1a0
+0x4dca60
+0x4e11d0
+0x4e5000
+0x4f0f80
+0x4f4c20
+0x4faa00
+0x4fc130
+0x50a060
+0x50d190
+0x511450
+0x513090
+0x513180
+0x534050
+0x535490
+0x53a9e0
+0x54c970
+0x550f30
+0x559ee0
+0x562280
+0x566f10
+0x569430
+0x569f80
+0x572580
+0x577480
+0x57ad40
+0x5827a0
+0x5855c0
+0x59d530
+0x59dae0
+0x5a2cb0
+0x5a7550
+0x5af1d0
+0x5b2d00
+0x5bf8a0
+0x5c1640
+0x5c2120
+0x5c26e0
+0x5c39e0
+0x5c5620
+0x5d76f0
+0x5d89f0
+0x5d8d60
+0x5db910
+0x5dbc10
+0x5dc8a0
+0x5dd3e0
+0x5de3d0
+0x5f0160
+0x5f07a0
+0x5f0f00
+0x5f1720
+0x5f18e0
+0x5f28e0
+0x5f29e0
+0x5f2b50
+0x5f2df0
+0x5f3480
+0x5f37f0
+0x5f56f0
+0x5fd6f0
+0x5fe240
+0x5fe300
+0x5ff0f0
+0x6004a0
+0x6006e0
+0x6079d0
+0x615ee0
+0x617400
+0x61a7d0
+0x633aad
+0x634047
+0x634053
+0x63ea00
+0x644fb0
+0x6461c0
+0x647320
+0x64cd00
+0x651230
+0x654a60
+0x655510
+0x658f10
+0x65a630
+0x65c530
+0x663200
+0x66ab18
+0x66ab68
+# audit v2 (hybrid/build/audit_exclude_v2.txt, 2026-10-22 ~03:45): sec-cookie-const, va-address-lost, local-too-small, fwd-args-dropped, pending-stack-args
+0x41e020  # va-address-lost
+0x4246e0  # va-address-lost
+0x424ee0  # va-address-lost
+0x425250  # va-address-lost
+0x429470  # local-too-small
+0x42ac96  # va-address-lost
+0x431f60  # fwd-args-dropped
+0x434250  # local-too-small
+0x436120  # fwd-args-dropped
+0x438c20  # fwd-args-dropped
+0x438c60  # local-too-small
+0x438f50  # local-too-small
+0x43ae00  # local-too-small
+0x443d60  # local-too-small
+0x4449e0  # local-too-small
+0x449d80  # local-too-small
+0x453bf0  # local-too-small
+0x454850  # fwd-args-dropped
+0x45ba30  # fwd-args-dropped
+0x45cd90  # local-too-small
+0x45d5c0  # local-too-small
+0x45eda0  # fwd-args-dropped
+0x45fd50  # local-too-small
+0x462d00  # fwd-args-dropped
+0x466f30  # fwd-args-dropped
+0x46d5f0  # local-too-small
+0x46d8e0  # local-too-small
+0x470540  # fwd-args-dropped
+0x487a80  # local-too-small
+0x48b330  # fwd-args-dropped
+0x499c10  # va-address-lost
+0x499c30  # va-address-lost
+0x499ce0  # va-address-lost
+0x499d00  # va-address-lost
+0x499db0  # va-address-lost
+0x4a29f0  # local-too-small
+0x4a95f0  # fwd-args-dropped
+0x4ac640  # local-too-small
+0x4ac820  # local-too-small
+0x4ad9a0  # local-too-small
+0x4b2470  # local-too-small
+0x4b4990  # local-too-small
+0x4ba7f0  # local-too-small
+0x4c58e0  # local-too-small
+0x4ca2d0  # local-too-small
+0x4cb200  # local-too-small
+0x4d3ab0  # va-address-lost
+0x4d3af0  # va-address-lost
+0x4d3db0  # va-address-lost
+0x4d4040  # fwd-args-dropped
+0x4d40f0  # va-address-lost
+0x4d50c0  # fwd-args-dropped
+0x4f28e0  # local-too-small
+0x4f68b0  # local-too-small
+0x4f9b90  # fwd-args-dropped
+0x4fe0f0  # local-too-small
+0x5035a0  # local-too-small
+0x506500  # local-too-small
+0x507510  # local-too-small
+0x509b10  # local-too-small
+0x50e310  # local-too-small
+0x513160  # fwd-args-dropped
+0x5139d0  # fwd-args-dropped
+0x513d10  # local-too-small
+0x5168b0  # local-too-small
+0x5172e0  # local-too-small
+0x51cad0  # fwd-args-dropped
+0x535560  # fwd-args-dropped
+0x53ac90  # local-too-small
+0x53b380  # local-too-small
+0x53d230  # local-too-small
+0x543a90  # local-too-small
+0x54ab70  # fwd-args-dropped
+0x54f0d0  # va-address-lost
+0x54fd30  # fwd-args-dropped
+0x558390  # local-too-small
+0x566020  # local-too-small
+0x577ee0  # local-too-small
+0x585200  # local-too-small
+0x5852e0  # fwd-args-dropped
+0x5868e0  # local-too-small
+0x589a10  # local-too-small
+0x591d80  # local-too-small
+0x591e50  # local-too-small
+0x596940  # local-too-small
+0x5a1030  # local-too-small
+0x5a31d0  # local-too-small
+0x5a5c60  # fwd-args-dropped
+0x5a76a0  # fwd-args-dropped
+0x5ac140  # local-too-small
+0x5ae450  # local-too-small
+0x5ae5a0  # local-too-small
+0x5b5d60  # local-too-small
+0x5b6b70  # local-too-small
+0x5b7100  # local-too-small
+0x5c0500  # local-too-small
+0x5c4190  # fwd-args-dropped
+0x5c6bf0  # local-too-small
+0x5c6c50  # local-too-small
+0x5c7160  # local-too-small
+0x5d42d0  # local-too-small
+0x5db2e0  # local-too-small
+0x5eb020  # local-too-small
+0x5eef00  # fwd-args-dropped
+0x5f1580  # fwd-args-dropped
+0x5f2e00  # fwd-args-dropped
+0x5f2e50  # fwd-args-dropped
+0x5f2f00  # fwd-args-dropped
+0x5f3000  # fwd-args-dropped
+0x5f31b0  # fwd-args-dropped
+0x5f3360  # fwd-args-dropped
+0x5f3fb0  # fwd-args-dropped
+0x5f5150  # fwd-args-dropped
+0x601c80  # va-address-lost
+0x602120  # va-address-lost
+0x610350  # local-too-small
+0x65f5f0  # fwd-args-dropped
+0x663a40  # local-too-small
+0x45b900  # hunt 2026-10-22 03:56: ZProjectMarks::ClassFrameUpdate (inline-casc-w3a)
+0x4cd180  # hunt 2026-10-22 04:43: GUESS write vtable and call (inline-casc-h2)
+0x4dd3d0  # hunt 2026-10-22 05:27: ZBaseGeom::UpdateLightListForLight (inline-casc-w2s80)
+0x4f0270  # hunt 2026-10-22 05:58: ZWINOBJ::GetMouseColi(SMouseColi*, float*, float*) (inline-codex-u3)
+0x4f9350  # hunt 2026-10-22 06:07: GUESS sort and group keyed records (inline-casc-s8)
+0x5a86c0  # hunt 2026-10-22 07:52: ZOnScreenDisplay::InitSprites (inline-casc-w3i)
+0x5aba60  # hunt 2026-10-22 08:11: CMessageBasics::Init(unsigned int, unsigned int, CSprite3D::tagSPRITEINFO*, bool) (inline-casc-w3f)
+0x631850  # hunt 2026-10-22 08:56: inflate_blocks (inline-casc-w2s54)
+
+# ---- audit v3 (2026-10-22 10:20): defect classes, not yet seen crashing
+# Generated by hybrid/audit_ports.py: addresses flagged by the v3 detectors and not in game/exclude_night.txt.
+# Format: address  # class: name (folder)
+0x426660  # call-arg-mismatch: ZSysFileGC::Close(void*) (inline-gap-band-42-44)
+0x42c4c0  # call-arg-mismatch: GUESS console command dispatch (inline-codex-t7)
+0x434010  # local-too-small: GUESS lifted 0x434010 (inline-casc-w4g)
+0x4346e0  # local-too-small: GUESS lifted 0x4346e0 (inline-casc-w3c)
+0x435040  # local-too-small: GUESS lifted 0x435040 (inline-casc-w3c)
+0x4356e0  # local-too-small: GUESS lifted 0x4356e0 (inline-casc-w3d)
+0x435800  # local-too-small: GUESS lifted 0x435800 (inline-casc-w2s59)
+0x437440  # local-too-small: GUESS lifted 0x437440 (inline-casc-w2s60)
+0x439690  # local-too-small: ZInputActions::Save (inline-unclaimed-22)
+0x439970  # local-too-small: GUESS lifted 0x439970 (inline-casc-w4g)
+0x43ff90  # local-too-small: GUESS lifted 0x43ff90 (inline-casc-w3f-d)
+0x440b20  # local-too-small: GUESS minimum distance to child volumes (inline-codex-u5)
+0x441f40  # local-too-small: GUESS update geometry tree bounds (inline-codex-t1)
+0x443080  # local-too-small: bounds_accumulate (inline-casc-w3b)
+0x4439b0  # local-too-small: GUESS_update_geometry_bounds (inline-codex-t2)
+0x449a00  # local-too-small: notify children and update manager state (inline-codex-s1)
+0x45a270  # local-too-small: GUESS lifted 0x45a270 (inline-casc-w3f-d)
+0x45c910  # local-too-small: GUESS add a named timeline element (SEH) (inline-casc-w4c)
+0x45e190  # local-too-small: GUESS lifted 0x45e190 (inline-casc-w3f-d)
+0x461c40  # local-too-small: GUESS linked object frame transform (inline-codex-t4)
+0x461d60  # local-too-small: GUESS rebind transform to owner (inline-casc-s6)
+0x466dc0  # clobbers-callee-saved: GUESS load_object (inline-casc-s6)
+0x46b800  # clobbers-callee-saved: FUN_46b800 (GUESS) thiscall (inline-unclaimed-68)
+0x4711f0  # no-stack-probe: GUESS lifted 0x4711f0 (inline-casc-w2s107)
+0x472ae0  # local-too-small: zlnkwhands_command (inline-casc-w3b)
+0x47ce80  # local-too-small: cursor_effect (inline-casc-w3b)
+0x481990  # local-too-small: ZPlayer::CheckMoveObjectTorso (inline-unclaimed-22)
+0x4a55e0  # local-too-small: ZMatPosAnim::Load (inline-unclaimed-81)
+0x4a93b0  # local-too-small: GUESS update normalized UI placement (inline-codex-u2)
+0x4b00e0  # local-too-small: GUESS resolve object by key (inline-casc-s8)
+0x4b0350  # local-too-small: CCutSequenceEvent::GetRootObject (inline-fresh-13)
+0x4b76b0  # local-too-small: GUESS lifted 0x4b76b0 (inline-casc-w4b)
+0x4b8bf0  # local-too-small: GUESS lifted 0x4b8bf0 (inline-casc-w3c)
+0x4bf890  # local-too-small: GUESS animated effect tick (inline-casc-w4b)
+0x4c4f10  # local-too-small: GUESS lifted 0x4c4f10 (inline-casc-w4b)
+0x4ebcf0  # local-too-small: ZCollisionBase::CalcLineCollision (inline-collision)
+0x4ed390  # local-too-small: GUESS_rooms_in_box (inline-codex-t2)
+0x4ef130  # local-too-small: GUESS set flag from string find then default block slot 0x6c (inline-casc-t4)
+0x4f2d80  # local-too-small: GUESS save a record to a stream (inline-casc-w4c)
+0x4f5c90  # local-too-small: GUESS create child through table object and configure (inline-casc-s5)
+0x4f7b10  # local-too-small: ZSlider::ClassInit (inline-fresh-13)
+0x4fefe0  # local-too-small: GUESS lifted 0x4fefe0 (inline-casc-w4b)
+0x50bd00  # clobbers-callee-saved: GUESS resolve object by named ids and register handle (inline-casc-s8)
+0x50c610  # local-too-small: GUESS lifted 0x50c610 (inline-casc-w3f-d)
+0x50f850  # local-too-small: transform linked object (inline-codex-s1)
+0x51c560  # local-too-small: actor_motion_refresh (inline-casc-w3b)
+0x51cf10  # local-too-small: GUESS /GS float loads (inline-casc-h3)
+0x523cc0  # local-too-small: GUESS lifted 0x523cc0 (inline-casc-w3f-d)
+0x52ac10  # local-too-small: GUESS lifted 0x52ac10 (inline-casc-w3f-d)
+0x535780  # local-too-small: GUESS lifted 0x535780 (inline-casc-w4f)
+0x535b70  # local-too-small: GUESS draw labels for a list of objects (inline-casc-w4c)
+0x5398f0  # local-too-small: GUESS lifted 0x5398f0 (inline-casc-w4f)
+0x53b2a0  # local-too-small: GUESS lifted 0x53b2a0 (inline-casc-w3d)
+0x5457f0  # clobbers-callee-saved: DistPointLineVar (point to segment) (inline-unclaimed-81)
+0x54c320  # call-arg-mismatch: COM start (GUESS) thiscall (inline-casc-h2)
+0x54c380  # call-arg-mismatch: FUN_0054c380 device calls 0x34/0x30 (COM stdcall) (inline-fresh-12)
+0x576670  # local-too-small: GUESS lifted 0x576670 (inline-casc-w3g)
+0x57cb40  # local-too-small: GUESS lifted 0x57cb40 (inline-casc-w2s60)
+0x57d950  # local-too-small: GUESS lifted 0x57d950 (inline-casc-w3f-d)
+0x581c10  # local-too-small: GUESS five-slot probe (inline-casc-w4b)
+0x5922c0  # local-too-small: callIfOk (GUESS) (inline-unclaimed-21)
+0x5935a0  # local-too-small: GUESS large object move damage (inline-codex-t1)
+0x59f3e0  # local-too-small: ZFFActor::DieByForce (inline-hitreact)
+0x5a0b80  # local-too-small: GUESS collect records (inline-casc-t1)
+0x5a4f70  # local-too-small: GUESS setup_camera_between_entries (inline-codex-s6)
+0x5a6230  # local-too-small: ZOnScreenDisplay::ClassInit2 (inline-ai)
+0x5b0360  # local-too-small: GUESS init_entries_from_config (inline-casc-s6)
+0x5b0a20  # call-arg-mismatch: CSaveMissions::AddMission (inline-wiremission)
+0x5b59e0  # local-too-small: GUESS lifted 0x5b59e0 (inline-casc-w3f-d)
+0x5be220  # local-too-small: GUESS lifted 0x5be220 (inline-casc-w3f-d)
+0x5bfe00  # local-too-small: CEntityTracker::FrameUpdate (inline-unclaimed-81)
+0x5c2940  # local-too-small: ZFenceGate::SetOpen (inline-casc-w2s60)
+0x5c3c60  # local-too-small: GUESS lifted 0x5c3c60 (inline-casc-w4b)
+0x5c6370  # local-too-small: GUESS lifted 0x5c6370 (inline-casc-w4b)
+0x5cbca0  # local-too-small: ZFFCamera1::InitCamboxDist (inferred) (inline-wirerender)
+0x5d3af0  # local-too-small: GUESS lifted 0x5d3af0 (inline-casc-w3e)
+0x5d4660  # local-too-small: GUESS create and configure a sub-object (inline-casc-s4)
+0x5d67e0  # local-too-small: GUESS initialize_clone_reference (inline-codex-s6)
+0x5e94c0  # local-too-small: GUESS hand 0x5e94c0 (inline-casc-w3f)
+0x61dcd0  # clobbers-callee-saved: asm copy 0x61dcd0 (inline-casc-w4a)
+0x63b7e0  # call-arg-mismatch: ZDrawBase::AllocSprites(int) thiscall (inline-casc-h2)
+0x64c4b0  # clobbers-callee-saved: GUESS collect visible entry chains (inline-casc-s8)
+
+# ---- audit v3 folders excluded wholesale (risk rule in the file header)
+# Generated by hybrid/audit_ports.py: folders to exclude wholesale (rule: >= 5 hooked functions, and risk >= 0.4
+# or >= 3 runtime culprits or >= 20% of the folder hit by >= 8 v3 detectors). Only addresses not already in game/exclude_night.txt.
+# Format: address  # folder-risk: name (folder)
+0x505110  # folder-risk: GUESS lifted 0x505110 (inline-casc-w3i)
+0x528260  # folder-risk: GUESS lifted 0x528260 (inline-casc-w3i)
+0x58ecd0  # folder-risk: GUESS lifted 0x58ecd0 (inline-casc-w3i)
+0x5947b0  # folder-risk: GUESS lifted 0x5947b0 (inline-casc-w3i)
+0x5a4120  # folder-risk: status_widget_tick_5a4120 (inline-casc-w3i)
+0x5d99b0  # folder-risk: GUESS lifted 0x5d99b0 (inline-casc-w3i)
+0x4bf110  # folder-risk: GUESS handle input event (inline-casc-t2)
+0x4bfb80  # folder-risk: GUESS timed progress update (inline-casc-t2)
+0x50ad50  # folder-risk: GUESS push typed value to renderer slot (inline-casc-t2)
+0x52d3f0  # folder-risk: GUESS closer-point test (inline-casc-t2)
+0x565760  # folder-risk: GUESS set viewport rectangle (inline-casc-t2)
+0x5c7830  # folder-risk: GUESS replay recorded render state (inline-casc-t2)
+0x552b50  # folder-risk: GUESS script binding: placement record lookup (inline-fable-hard)
+0x5a3710  # folder-risk: GUESS multiplayer manager ctor (inline-fable-hard)
+0x5af350  # folder-risk: ZFFInventoryBridge::GetNoOf(EFFItemType) (inline-fable-hard)
+0x605ba0  # folder-risk: GUESS type-list parser append (inline-fable-hard)
+0x487230  # folder-risk: GUESS advance timed animation on actor (inline-casc-u3)
+0x493820  # folder-risk: GUESS hash table insert with linear probing (inline-casc-u3)
+0x52e670  # folder-risk: GUESS snap point to grid cell centre (inline-casc-u3)
+0x56f590  # folder-risk: GUESS set up panel widgets by stored ids (inline-casc-u3)
+0x5ee970  # folder-risk: GUESS serialise object fields to stream (inline-casc-u3)
+0x640590  # folder-risk: GUESS update sub-objects of listed entries (inline-casc-u3)
+0x4ef660  # folder-risk: GUESS lifted 0x4ef660 (inline-casc-w2s54)
+0x4fa720  # folder-risk: GUESS lifted 0x4fa720 (inline-casc-w2s54)
+0x62af10  # folder-risk: GUESS lifted 0x62af10 (inline-casc-w2s54)
+0x46d070  # folder-risk: GUESS stream block read then rescale (inline-casc-u5)
+0x4bf6b0  # folder-risk: GUESS timed fade of level (inline-casc-u5)
+0x501290  # folder-risk: GUESS vector magnitude after lookup (inline-casc-u5)
+0x50eb20  # folder-risk: GUESS copy vector into three entries (inline-casc-u5)
+0x5251c0  # folder-risk: GUESS init moving point refresh (inline-casc-u5)
+0x636a80  # folder-risk: GUESS recode colour blocks (inline-casc-u5)
+0x4351c0  # folder-risk: filter extension and strip root (inline-codex-s1)
+0x449a00  # folder-risk: notify children and update manager state (inline-codex-s1)
+0x45bb10  # folder-risk: submit service request (inline-codex-s1)
+0x4862b0  # folder-risk: initialize and exchange list results (inline-codex-s1)
+0x488900  # folder-risk: sample selected track (inline-codex-s1)
+0x4bbd00  # folder-risk: read clamped response parameters (inline-codex-s1)
+0x4c1f80  # folder-risk: update scaled counter and return shifted value (inline-codex-s1)
+0x4de6a3  # folder-risk: partial-frame transform interpolation (inline-codex-s1)
+0x4df1e0  # folder-risk: quaternion matrix conversion (inline-codex-s1)
+0x4e2800  # folder-risk: segment box intersection (inline-codex-s1)
+0x50f850  # folder-risk: transform linked object (inline-codex-s1)
+0x516360  # folder-risk: initialize damper at ground (inline-codex-s1)
+0x51e340  # folder-risk: update embedded motion channels (inline-codex-s1)
+0x51e470  # folder-risk: update helicopter tilt (inline-codex-s1)
+0x522f60  # folder-risk: sample signed map angle (inline-codex-s1)
+0x526df0  # folder-risk: average child heights and reposition (inline-codex-s1)
+0x527420  # folder-risk: set vector pair and angle (inline-codex-s1)
+0x559dc0  # folder-risk: resolve scalar and update tagged output (inline-codex-s1)
+0x595100  # folder-risk: configure multiplayer bindings (inline-codex-s1)
+0x5c2cb0  # folder-risk: choose minimum counter with random ties (inline-codex-s1)
+0x5d3660  # folder-risk: deserialize entity references (inline-codex-s1)
+0x5d6960  # folder-risk: direction angle comparison (inline-codex-s1)
+0x5d78e0  # folder-risk: initialize level actor state (inline-codex-s1)
+0x5de090  # folder-risk: replace minimum scored record (inline-codex-s1)
+0x5de260  # folder-risk: load effect configuration (inline-codex-s1)
+0x5f2d69  # folder-risk: partial-frame string assign (inline-codex-s1)
+0x43ff90  # folder-risk: GUESS lifted 0x43ff90 (inline-casc-w3f-d)
+0x441c00  # folder-risk: GUESS lifted 0x441c00 (inline-casc-w3f-d)
+0x44f9c0  # folder-risk: GUESS lifted 0x44f9c0 (inline-casc-w3f-d)
+0x455dd0  # folder-risk: GUESS lifted 0x455dd0 (inline-casc-w3f-d)
+0x45a270  # folder-risk: GUESS lifted 0x45a270 (inline-casc-w3f-d)
+0x45d3a0  # folder-risk: GUESS lifted 0x45d3a0 (inline-casc-w3f-d)
+0x45da60  # folder-risk: GUESS lifted 0x45da60 (inline-casc-w3f-d)
+0x45e190  # folder-risk: GUESS lifted 0x45e190 (inline-casc-w3f-d)
+0x45f090  # folder-risk: GUESS lifted 0x45f090 (inline-casc-w3f-d)
+0x45f430  # folder-risk: GUESS lifted 0x45f430 (inline-casc-w3f-d)
+0x4613a0  # folder-risk: GUESS lifted 0x4613a0 (inline-casc-w3f-d)
+0x4634f0  # folder-risk: GUESS lifted 0x4634f0 (inline-casc-w3f-d)
+0x463620  # folder-risk: GUESS lifted 0x463620 (inline-casc-w3f-d)
+0x477de0  # folder-risk: GUESS lifted 0x477de0 (inline-casc-w3f-d)
+0x4954f0  # folder-risk: GUESS lifted 0x4954f0 (inline-casc-w3f-d)
+0x495b30  # folder-risk: GUESS lifted 0x495b30 (inline-casc-w3f-d)
+0x496160  # folder-risk: GUESS lifted 0x496160 (inline-casc-w3f-d)
+0x498430  # folder-risk: GUESS lifted 0x498430 (inline-casc-w3f-d)
+0x4a25a0  # folder-risk: GUESS lifted 0x4a25a0 (inline-casc-w3f-d)
+0x4a85a0  # folder-risk: GUESS lifted 0x4a85a0 (inline-casc-w3f-d)
+0x4ad770  # folder-risk: GUESS lifted 0x4ad770 (inline-casc-w3f-d)
+0x5082c0  # folder-risk: GUESS lifted 0x5082c0 (inline-casc-w3f-d)
+0x50c610  # folder-risk: GUESS lifted 0x50c610 (inline-casc-w3f-d)
+0x5139e0  # folder-risk: GUESS lifted 0x5139e0 (inline-casc-w3f-d)
+0x515da0  # folder-risk: GUESS lifted 0x515da0 (inline-casc-w3f-d)
+0x523cc0  # folder-risk: GUESS lifted 0x523cc0 (inline-casc-w3f-d)
+0x52ac10  # folder-risk: GUESS lifted 0x52ac10 (inline-casc-w3f-d)
+0x57cdc0  # folder-risk: GUESS lifted 0x57cdc0 (inline-casc-w3f-d)
+0x57d950  # folder-risk: GUESS lifted 0x57d950 (inline-casc-w3f-d)
+0x590620  # folder-risk: GUESS lifted 0x590620 (inline-casc-w3f-d)
+0x590820  # folder-risk: GUESS lifted 0x590820 (inline-casc-w3f-d)
+0x592410  # folder-risk: GUESS lifted 0x592410 (inline-casc-w3f-d)
+0x598eb0  # folder-risk: GUESS lifted 0x598eb0 (inline-casc-w3f-d)
+0x5a00b0  # folder-risk: GUESS lifted 0x5a00b0 (inline-casc-w3f-d)
+0x5abce0  # folder-risk: GUESS lifted 0x5abce0 (inline-casc-w3f-d)
+0x5b59e0  # folder-risk: GUESS lifted 0x5b59e0 (inline-casc-w3f-d)
+0x5be220  # folder-risk: GUESS lifted 0x5be220 (inline-casc-w3f-d)
+0x5ee720  # folder-risk: GUESS lifted 0x5ee720 (inline-casc-w3f-d)
+0x5f10c0  # folder-risk: GUESS lifted 0x5f10c0 (inline-casc-w3f-d)
+0x5f1c20  # folder-risk: GUESS lifted 0x5f1c20 (inline-casc-w3f-d)
+0x5f1f00  # folder-risk: GUESS lifted 0x5f1f00 (inline-casc-w3f-d)
+0x5f9dd0  # folder-risk: GUESS lifted 0x5f9dd0 (inline-casc-w3f-d)
+0x600940  # folder-risk: GUESS lifted 0x600940 (inline-casc-w3f-d)
+0x601020  # folder-risk: GUESS lifted 0x601020 (inline-casc-w3f-d)
+0x602000  # folder-risk: GUESS lifted 0x602000 (inline-casc-w3f-d)
+0x602750  # folder-risk: GUESS lifted 0x602750 (inline-casc-w3f-d)
+0x6028b0  # folder-risk: GUESS lifted 0x6028b0 (inline-casc-w3f-d)
+0x605150  # folder-risk: GUESS lifted 0x605150 (inline-casc-w3f-d)
+0x605630  # folder-risk: GUESS lifted 0x605630 (inline-casc-w3f-d)
+0x441660  # folder-risk: ZGROUP::ResetGroupPosition (unknown) thiscall (inline-unclaimed-27)
+0x45d380  # folder-risk: FUN_45d380 (GUESS) thiscall (inline-unclaimed-27)
+0x45d720  # folder-risk: ZGEOM::CopyExData (unknown) thiscall (inline-unclaimed-27)
+0x45f7c0  # folder-risk: ZGEOM::RecurGetNext (unknown) thiscall (inline-unclaimed-27)
+0x4643e0  # folder-risk: GUESS FUN_004643e0 (unknown) thiscall (inline-unclaimed-27)
+0x465a60  # folder-risk: FUN_VirtualCallSetOne (GUESS) thiscall (inline-unclaimed-27)
+0x466c00  # folder-risk: FUN_466c00 (GUESS) thiscall (inline-unclaimed-27)
+0x483420  # folder-risk: ZPlayer::EnableControls (unknown) thiscall (inline-unclaimed-27)
+0x483a60  # folder-risk: ZPlayer::GetCenterSphere (unknown) thiscall (inline-unclaimed-27)
+0x484320  # folder-risk: ZPlayer::MoveToMatPos (unknown) thiscall (inline-unclaimed-27)
+0x484fa0  # folder-risk: ZPlayer::SetDialog (unknown) thiscall (inline-unclaimed-27)
+0x4877a0  # folder-risk: ZMovementGuide::ZMovementGuide (GUESS) thiscall (inline-unclaimed-27)
+0x4a1a70  # folder-risk: FUN_4a1a70 (GUESS) thiscall (inline-unclaimed-27)
+0x4cb0e0  # folder-risk: GUESS call pair (thiscall) (inline-unclaimed-27)
+0x4cf0c0  # folder-risk: LINKREFTAB::RunInitNxtRef (unknown) thiscall (inline-unclaimed-27)
+0x4d3a60  # folder-risk: FUN_4d3a60 (GUESS) thiscall (inline-unclaimed-27)
+0x4d7520  # folder-risk: GUESS FUN_004d7520 (unknown) thiscall (inline-unclaimed-27)
+0x4da720  # folder-risk: ZBaseGeom::DetachFromDynamicContainer (unknown) thiscall (inline-unclaimed-27)
+0x4e5140  # folder-risk: FUN_4e5140 (GUESS) thiscall (inline-unclaimed-27)
+0x4e7ce0  # folder-risk: ZRunMatPosAnim::SetFrameStart (unknown) thiscall (inline-unclaimed-27)
+0x4f2be0  # folder-risk: FUN_4f2be0 (GUESS) thiscall (inline-unclaimed-27)
+0x508640  # folder-risk: FUN_508640 (GUESS) thiscall (inline-unclaimed-27)
+0x513040  # folder-risk: ZMoveOnSpline::GetExitRef (unknown) thiscall (inline-unclaimed-27)
+0x514560  # folder-risk: ZMoveOnSpline::StopSound (unknown) thiscall (inline-unclaimed-27)
+0x55c740  # folder-risk: FUN_55c740 (GUESS) thiscall (inline-unclaimed-27)
+0x581200  # folder-risk: FUN_581200 (GUESS) thiscall (inline-unclaimed-27)
+0x584c30  # folder-risk: FUN_584c30 (GUESS) thiscall (inline-unclaimed-27)
+0x5888a0  # folder-risk: FUN_5888a0 (GUESS) cdecl-void (inline-unclaimed-27)
+0x588920  # folder-risk: FUN_588920 (GUESS) cdecl-void (inline-unclaimed-27)
+0x588940  # folder-risk: FUN_588940 (GUESS) fastcall (inline-unclaimed-27)
+0x589560  # folder-risk: FUN_589560 (GUESS) thiscall (inline-unclaimed-27)
+0x5895b0  # folder-risk: FUN_5895b0 (GUESS) thiscall (inline-unclaimed-27)
+0x589600  # folder-risk: FUN_589600 (GUESS) thiscall (inline-unclaimed-27)
+0x5896b0  # folder-risk: FUN_5896b0 (GUESS) thiscall (inline-unclaimed-27)
+0x5897d0  # folder-risk: FUN_5897d0 (GUESS) thiscall (inline-unclaimed-27)
+0x589810  # folder-risk: FUN_589810 (GUESS) thiscall (inline-unclaimed-27)
+0x589840  # folder-risk: FUN_589840 (GUESS) thiscall (inline-unclaimed-27)
+0x58bbc0  # folder-risk: FUN_58bbc0 (GUESS) fastcall (inline-unclaimed-27)
+0x5979c0  # folder-risk: FUN_5979c0 (GUESS) thiscall (inline-unclaimed-27)
+0x598cf0  # folder-risk: FUN_598cf0 (GUESS) thiscall (inline-unclaimed-27)
+0x59a280  # folder-risk: FUN_59a280 (GUESS) thiscall (inline-unclaimed-27)
+0x59a6e0  # folder-risk: FUN_59a6e0 (GUESS) thiscall (inline-unclaimed-27)
+0x59a9b0  # folder-risk: FUN_59a9b0 (GUESS) thiscall (inline-unclaimed-27)
+0x59ac70  # folder-risk: FUN_59ac70 (GUESS) thiscall (inline-unclaimed-27)
+0x59ad40  # folder-risk: FUN_59ad40 (GUESS) thiscall (inline-unclaimed-27)
+0x59c4a0  # folder-risk: FUN_59c4a0 (GUESS) cdecl-void (inline-unclaimed-27)
+0x59dd10  # folder-risk: FUN_59dd10 (GUESS) fastcall (inline-unclaimed-27)
+0x5bbfe0  # folder-risk: CareTaker::CareTaker5bbfe0 (GUESS) thiscall (inline-unclaimed-27)
+0x5bc4e0  # folder-risk: FUN_5bc4e0 (GUESS) thiscall (inline-unclaimed-27)
+0x5bc620  # folder-risk: CareTaker::CareTaker5bc620 (GUESS) thiscall (inline-unclaimed-27)
+0x5edb00  # folder-risk: CSpriteBorder2D::SetHeight (unknown) thiscall (inline-unclaimed-27)
+0x639b80  # folder-risk: GUESS hook call ret0 (stdcall) (inline-unclaimed-27)
+0x64c4a0  # folder-risk: GUESS page base (stdcall) (inline-unclaimed-27)
+0x64ede0  # folder-risk: GUESS range out (thiscall) (inline-unclaimed-27)
+0x64fc00  # folder-risk: GUESS copy pair (thiscall) (inline-unclaimed-27)
+0x656140  # folder-risk: GUESS copy dword (stdcall) (inline-unclaimed-27)
+0x662660  # folder-risk: FUN_662660 (GUESS) thiscall (inline-unclaimed-27)
+0x663060  # folder-risk: FUN_663060 (GUESS) thiscall (inline-unclaimed-27)
+0x66ffe0  # folder-risk: GUESS splice globals (cdecl) (inline-unclaimed-27)
+0x670120  # folder-risk: GUESS splice (cdecl) (inline-unclaimed-27)
+0x670260  # folder-risk: GUESS splice (cdecl) (inline-unclaimed-27)
+0x6703a0  # folder-risk: GUESS splice (cdecl) (inline-unclaimed-27)
+0x6704e0  # folder-risk: GUESS splice (cdecl) (inline-unclaimed-27)
+0x670620  # folder-risk: GUESS splice (cdecl) (inline-unclaimed-27)
+0x670760  # folder-risk: GUESS splice (cdecl) (inline-unclaimed-27)
+0x6708a0  # folder-risk: GUESS splice (cdecl) (inline-unclaimed-27)
+0x6709e0  # folder-risk: GUESS splice (cdecl) (inline-unclaimed-27)
+0x670b20  # folder-risk: GUESS splice (cdecl) (inline-unclaimed-27)
+0x670c60  # folder-risk: GUESS splice (cdecl) (inline-unclaimed-27)
+0x670da0  # folder-risk: GUESS splice (cdecl) (inline-unclaimed-27)
+0x670ee0  # folder-risk: GUESS splice (cdecl) (inline-unclaimed-27)
+0x674fe0  # folder-risk: GUESS splice (cdecl) (inline-unclaimed-27)
+0x675120  # folder-risk: GUESS splice (cdecl) (inline-unclaimed-27)
+0x675260  # folder-risk: GUESS splice (cdecl) (inline-unclaimed-27)
+0x6753a0  # folder-risk: GUESS splice (cdecl) (inline-unclaimed-27)
+0x6754e0  # folder-risk: GUESS splice (cdecl) (inline-unclaimed-27)
+0x675620  # folder-risk: GUESS splice (cdecl) (inline-unclaimed-27)
+0x4a5820  # hunt 2026-10-22 10:00: ZMatPosAnim::ExpandBounds(float*, float*, float*, ZBaseGeom*) (inline-unclaimed-35)
+0x4dc110  # hunt 2026-10-22 10:41: ZBaseGeom::Name const (inline-unclaimed-22)
+0x4dc1e0  # hunt 2026-10-22 11:00: ZBaseGeom::RemoveFromRoomList(ZROOM*) (inline-casc-s4)
+0x4e3e40  # hunt 2026-10-22 11:19: ZOctreeCompiled::RemapObjects(unsigned int (*)(unsigned int)*) (inline-casc-w3a)
+0x4d25f0  # hunt 2026-10-22 11:47: CCom::AddValOfType(const char*, int, CCOMTypeCast*, int, const char*) (inline-unclaimed-63)
+0x4d9f90  # hunt 2026-10-22 11:59: ZBaseGeom::AutoAssignToRooms (inline-casc-w3b)
+0x4e4050  # hunt 2026-10-22 12:11: GUESS create octree box node (inline-casc-s6)
+0x564700  # hunt 2026-10-22 12:49: CFileWindow::FrameUpdate (inline-casc-w2s62)
+
+# ---- audit v4 (2026-10-22 15:07): call-args-short, call-this-unset, call-edx-unset, orig-pending-slot
+# Generated by hybrid/audit_ports.py: addresses flagged by the v4 detectors and not in game/exclude_level2.txt.
+# Format: address  # class: name (folder)
+0x4080d0  # call-args-short: GUESS lifted 0x4080d0 (inline-casc-w4b)
+0x4670b0  # call-args-short: ZIKLNKOBJ PlaySoundFootStep (inline-codex-s5)
+0x46ffd0  # call-args-short: ZItem::PlaySound(unsigned int) (vtable) (inline-unclaimed-41)
+0x4a4ba0  # call-edx-unset: timeline_update (inline-casc-w3b)
+0x4f2b30  # orig-pending-slot: GUESS detach current child and notify (inline-casc-s4)
+0x4f7620  # orig-pending-slot: GUESS swap attached object (inline-casc-s4)
+0x4f7fe0  # orig-pending-slot: ZSlider::NotifyChange (inline-casc-h3)
+0x4fa8a0  # orig-pending-slot: GUESS change mode and notify (inline-casc-s1)
+0x500500  # call-args-short: GUESS FUN_500500 (unknown) stdcall (inline-unclaimed-73)
+0x5228e0  # call-args-short: GUESS FUN_005228e0 (unknown) thiscall (inline-unclaimed-73)
+0x54c750  # call-edx-unset: GUESS clamp signed input and dispatch callback (inline-casc-h2)
+0x556e80  # call-args-short: GUESS command resolving object and name (inline-casc-s6)
+0x5571e0  # call-args-short: two lookups then call on the global object (residue 2) stdcall (inline-unclaimed-43)
+0x5b7900  # call-args-short: ZCharisma::Command (inline-ai)
+0x5fa590  # call-args-short: two vtable calls around 0x5fa0d0 name lookup (name GUESS) (inline-unclaimed-70)
+0x5fed20  # call-args-short: GUESS replay ids into tagged vector (inline-casc-s8)
+0x5ff2b0  # call-args-short: GUESS hand 0x5ff2b0 (inline-casc-w3f)
+0x601810  # call-args-short: GUESS find named node and call sink (inline-casc-s8)
+0x62dbb0  # call-args-short: parser_step_e (inline-casc-w3b)
+0x645490  # call-args-short: ZBoneModifyBase::AttachBaseGeomToBone(const ZBaseGeom*, unsigned int, const float*, const float*) (inline-unclaimed-41)
+0x645ec0  # call-args-short: listRemove645 (GUESS) (inline-unclaimed-21)
+0x657c50  # call-args-short: GUESS lookup and apply float via chain of calls (inline-casc-h2)
+0x464400  # hunt 2026-10-22 14:10: ZLNKOBJ::SetBoneFrameBlend(AnimHeader*, float, float, bool, unsigned int) (inline-casc-h2)
+# ---- 17 ports fixed on hybrid-fixes (hybrid/build/fixed_v4.txt) removed from this list 2026-10-22 15:40
+0x4af780  # hunt 2026-10-22 15:02: CCheckInside::Init (inline-casc-w2s10)
+0x4644f0  # hunt 2026-10-22 15:19: ZLNKOBJ::SetDefaultBones(const ZBone*, const SBoneDefinition*) (inline-unclaimed-81)
+0x467740  # hunt 2026-10-22 15:34: ZIKLNKOBJ::RunLnkAction(ZLnkAction*) (inline-casc-h3)
+0x477740  # hunt 2026-10-22 16:07: ZActor::ActivateBaseMove(unsigned int, bool) (inline-unclaimed-22)
+
+# ---- shadow run C (2026-10-22 16:30): wrong in the current image, not excluded before
+0x4419f0  # shadow mismatch: vmmul | mem 0x1ad0b4 (stack+68): orig c20d3c30 port c20d3c2f
+0x4903b0  # shadow mismatch: GUESS famM 0x4903b0 | fake heap 0x16cf100c: orig c14d5be7 port df624d00; fake heap 0x16cf1014: orig df
+0x490500  # shadow mismatch: GUESS famM 0x490500 | fake heap 0x16cf100c: orig 00000000 port df624d00; fake heap 0x16cf1014: orig df
+0x490940  # shadow mismatch: ZEngineDataBase::GetPrimsData | fake heap 0x16cf100c: orig 9e45959e port df624d00; fake heap 0x16cf1014: orig df
+0x490d20  # shadow mismatch: ZEngineDataBase::GetSoundData | fake heap 0x16cf100c: orig 00000000 port df624d00; fake heap 0x16cf1014: orig df
+0x490ff0  # shadow mismatch: GUESS famM 0x490ff0 | fake heap 0x16cf100c: orig e2f8dc56 port df624d00; fake heap 0x16cf1014: orig df
+0x491140  # shadow mismatch: GUESS lifted 0x491140 | fake heap 0x16cf400c: orig e26b5e12 port df624d00; fake heap 0x16cf4014: orig df
+0x491b70  # shadow mismatch: GUESS FUN_491b70 | fake heap 0x1759600c: orig 00000000 port 08d01a00; fake heap 0x17596010: orig 0a
+0x4de040  # shadow mismatch: createmat | mem 0x1af92c (stack+cc): orig be7e7aa7 port be7e7aa8; mem 0x1af930 (stack+d0): o
+0x53b8d0  # shadow mismatch: GUESS slot-record list builder | mem 0xf869514 (heap): orig 00000107 port 00000007; mem 0xf869518 (heap): orig 00
+0x61a6b0  # shadow crash: FUN_0061a6b0 | port fault: read of unmapped 0x0 near port 0x3102f121; DLL call #1: orig gameove
+0x484b10  # hunt 2026-10-22 16:37: ZPlayer::PositionCollisionBox(ZCollisionBox*, ZBaseGeom*, const float*, const float*, const float*) (inline-unclaimed-41)
+
+# ---- shadow run D level 1 (2026-10-22 17:30): wrong in cur
+# shadow testing: cur verdict mismatch or crash, not in exclude_level2.txt (worklist.py, 45 functions)
+0x4234f0  # GUESS serialize engine and process clock samples: mismatch mem 0x6aa4654 (heap): orig 86a00000 port d3800000; mem 0x6aa4658 (heap): orig 00010001 port 06683ccc; xmm0 (maybe live): orig 0x4052b49ba0000000 port 0x9b200677
+0x44c840  # vnorm: mismatch mem 0x1af924 (stack+e4): orig bf7438ee port bf7438ef
+0x44e630  # vnorm(dst, src): mismatch mem 0x1adb3c (stack+20): orig bf800000 port bf7fffff
+0x465fd0  # GUESS initialize_and_dispatch_engine_resource: mismatch mem 0x6c2c904 (heap): orig 00340033 port 5f707da0
+0x478780  # GUESS hand 0x478780: mismatch mem 0x6c36058 (heap): orig c5798174 port 001af920; mem 0x6c3605c (heap): orig 44c96194 port 311c5427; mem 0x6c36060 (heap): orig c48a4eca port 1956f390
+0x484ff0  # GUESS build vector and hand to slot: mismatch mem 0x19392674 (heap): orig c5a098ad port 00000000; mem 0x19392678 (heap): orig 44c26591 port c2b20000; mem 0x1939267c (heap): orig 431a1be4 port 00000000
+0x48ffd0  # GUESS famM 0x48ffd0: mismatch fake heap 0x16cf100c: orig 2ee43544 port df624d00; fake heap 0x16cf1010: orig 8869fc3f port d073b206; fake heap 0x16cf1014: orig 0d72a487 port d0ee2f00
+0x4a3d60  # ZSoundAmbient::CanPlayInRoom (GUESS) thiscall: mismatch esi (callee-saved, entry 0x68fbe8): orig 0x68fbe8 port 0x1
+0x4c8860  # ZShotActivate::Command: crash port fault: invalid instruction at port 0x31339139 (0f0b000000000055); DLL call #0: orig __stdio_common_vsprintf('sprintf', b'(..\\..\\code\\engine\\eventsbase\
+0x4d2bc0  # unnamed C-set 0x4d2bc0 thiscall: mismatch eax (read by the caller, mask 0xffffffff): orig 0x1ad3dc port 0x6922bc
+0x4e54c0  # GUESS lifted 0x4e54c0: crash port fault: read of unmapped 0x553 near 0x4e5df0
+0x4ec660  # strip output callback (guessed): mismatch mem 0x19d718 (stack+10c): orig 00000000 port 00000001
+0x4f9c00  # GUESS lookup then vcall 310 with junk args: mismatch mem 0x1a9fa848 (heap): orig a40c0237 port 900c0237; mem 0x1a9fa898 (heap): orig 7000ff00 port 0c00ff00; mem 0x6fdfb4 (exe .data): orig f5a40c02 port f5900c02 (c
+0x4fa370  # GUESS FUN_4fa370 (unknown) thiscall: mismatch mem 0x1a9fa848 (heap): orig a40c0237 port 880c0237; mem 0x1a9fa898 (heap): orig 7000ff00 port 1400ff00; mem 0x6fdfb4 (exe .data): orig f5a40c02 port f5880c02 (c
+0x507e50  # unnamed 0x507e50: mismatch mem 0x19574c30 (heap): orig 0118dae0 port 0018dae0; edx (maybe live): orig 0x0 port 0x18dae8d0; xmm0 (maybe live): orig 0x3bfe01fc port 0x41500000
+0x5095f0  # ZActorIf::opaqueCall (core) stdcall: crash port fault: read of unmapped 0x2a near 0x501838
+0x512940  # create_object_chain: crash port fault: read of unmapped 0x890cef0b near 0x470f87
+0x516f40  # GUESS copy vector and normalise: mismatch mem 0x195abcc4 (heap): orig c95cbe16 port c95bbe16; mem 0x195abcc8 (heap): orig 35e41d5d port 35e31d5d
+0x5194c0  # ZMoveOnSplineIf::FindSplineVal (unknown) thiscall: mismatch DLL call #0: orig __stdio_common_vsprintf('sprintf', b'(..\\..\\code\\engine\\shared\\vehicles\\moveonspline_if.cpp:213)') port - (orig 4 calls, port 0); mem 0x
+0x5243a0  # GUESS reciprocal or large default: mismatch ST0: orig 00000000000000c80640 (200.0) port 002000004b0000c80640 (200.00000447034847)
+0x55ec30  # ZFFActorIf::opaqueCall (core) stdcall: crash port fault: read of unmapped 0x5f near 0x501838
+0x56f860  # GUESS key dispatch of text input control: mismatch mem 0x1a9fa898 (heap): orig 7000ff00 port 4c00ff00; mem 0x1a9fa89c (heap): orig 6444a8a8 port 14006786; mem 0x1a9fa8a0 (heap): orig 4b001af5 port 4844a8a8
+0x584580  # hitpointInit (GUESS): crash port fault: read of unmapped 0x4c near 0x4301d7; DLL call #0: orig EnterCriticalSection(0x6fd228) port - (orig 4 calls, port 0)
+0x58d000  # GUESS lifted 0x58d000: crash port fault: read of unmapped 0x20201008 near port 0x31215a62
+0x58df40  # GUESS lifted 0x58df40: crash port fault: read of unmapped 0x400026f0 near 0x45fa90; DLL call #4: orig EnterCriticalSection(0x6fd228) port - (orig 552 calls, port 4)
+0x597fc0  # GUESS mark option seen and show name: crash port fault: read of unmapped 0xa70 near 0x5b0b7d; DLL call #1: orig GetKeyNameTextA('stk', 'stk', 0x63) port - (orig 237 calls, port 1)
+0x59efb0  # ZFFActor::CreateItemFromItemTemplate(unsigned int): crash port fault: read of unmapped 0x92fff1c5 near 0x470f58; DLL call #35: orig EnterCriticalSection(0x6fd228) port - (orig 39 calls, port 35)
+0x59f1a0  # GUESS lifted 0x59f1a0: mismatch DLL call #0: orig EnterCriticalSection(0x6fd228) port __stdio_common_vsprintf('sprintf', b'(..\\..\\freedomfighter\\FFBackground\\ZFFActor.cpp:1388)') (orig 41 
+0x5af990  # ZFFInventoryBridge::GiveWeapon(EFFItemType, unsigned int, bo: crash port fault: read of unmapped 0x92fff9c5 near 0x470f58; DLL call #25: orig EnterCriticalSection(0x6fd228) port - (orig 31 calls, port 25)
+0x5bf340  # CCivilianPathList::SetCivilianOnPath: mismatch DLL call #8: orig EnterCriticalSection(0x6fd228) port - (orig 40 calls, port 8); mem 0x6aa3dd8 (heap): orig b2067501 port 7c5d8601; mem 0x6aa3ddc (heap): orig a
+0x5ca5f0  # ZFFCam::UpdateVars: crash port fault: read of unmapped 0xb9d64140 near port 0x31351d4e
+0x5ce0b0  # GUESS lifted 0x5ce0b0: crash port fault: read of unmapped 0xa09accac near port 0x31208276
+0x5d28c0  # GUESS update heading vectors: mismatch mem 0x195631dc (heap): orig 00000000 port beeb851f
+0x5df5f0  # field_init_three_args: mismatch eax (the caller returns it, a caller up the chain reads it): orig 0x19644250 port 0x18d79d10; edx (maybe live): orig 0x30000 port 0x19564140
+0x5eac90  # CActorActionMarker::Update: crash port fault: read of unmapped 0xa1 near port 0x31006275
+0x5ecd80  # GUESS view scale setup and per-entry update: mismatch mem 0x1967321c (heap): orig 3db2911b port 00000000; mem 0x19673220 (heap): orig 3db2911c port 00000000; mem 0x19673244 (heap): orig 3f9c3ef8 port 00000000
+0x5fcb80  # PPOLibrary_t::loadProcess: mismatch mem 0x6c34148 (heap): orig d5800000 port d2280000; mem 0x6c3414c (heap): orig f69b06c2 port f7e5006f; mem 0x6c3415c (heap): orig d5800000 port d2280000
+0x604460  # GUESS dispatch record id through handler table: mismatch mem 0x192352d4 (heap): orig 51e006db port 193b001a; mem 0x192352d8 (heap): orig 00021923 port 00020055
+0x607640  # GUESS load animation keys from a stream (SEH): crash port fault: read of unmapped 0x8 near 0x5f301a
+0x63b850  # addPair (GUESS): crash port fault: read of unmapped 0x6418e606 near 0x64c7f2
+0x646040  # sub_646040: mismatch eax (read by the caller, mask 0xff): orig 0x6ca8c01 port 0x0
+0x648a40  # GUESS map_elements_to_nodes: mismatch mem 0x18e1c020 (heap): orig 000006c9 port 000006c8; mem 0x18e1c034 (heap): orig 000006c9 port 000006c8; mem 0x18e1c048 (heap): orig 000006c9 port 000006c8
+0x64a280  # GUESS compact and submit geometry records: mismatch eax (read by the caller, mask 0xffffffff): orig 0x0 port 0x1a63d0
+0x663bd0  # GUESS lifted 0x663bd0: mismatch ST0: orig 00000000007ecc9e07c0 (-317.59759521484375) port 0000891d8d7dcc9e07c0 (-317.59758151952883)
+
+# ---- shadow run E C01A play (2026-10-22 18:30): wrong in cur
+# shadow testing: cur verdict mismatch or crash, not in exclude_level2.txt (worklist.py, 4 functions)
+0x439020  # ZInputActions::GetButtonName (unknown) stdcall: crash port fault: read of unmapped 0x5 near 0x49e018
+0x582060  # GUESS dispatch a command code to one of three handlers: mismatch mem 0xf91ded8 (heap): orig 168f14d0 port 11f88706
+0x5833e0  # area_emit: mismatch mem 0xf91ded8 (heap): orig 00000000 port cccccccc
+0x5a1830  # ZFFActor::OnSound: mismatch port budget: time limit 30s; DLL call #8: orig - port EnterCriticalSection(0x6fd228) (orig 8 calls, port 27164)
+# ---- 69 ports fixed in ports_next3 (hybrid/build/fixed_v5.txt) removed 2026-10-22 18:50; 0x53b8d0 stays
+
+# ---- shadow run F C02RB hub (2026-10-22 19:40): wrong in next3
+# shadow testing: next3 verdict mismatch or crash, not in exclude_level2.txt (worklist.py, 4 functions)
+# 0x554bf0  fixed in ports_next8: slot 0x114 pops 4, &out and 0 are args 2 and 3 of slot 0x128 (was: GUESS bind record to engine id (B): crash port fault: read of unmapped 0x489c0b7 near 0x5b0b95)
+0x5ab9d0  # loopSum5ab9d0 (GUESS) thiscall: mismatch esi (callee-saved, entry 0x161af440): orig 0x161af440 port 0x39000000
+0x5edf70  # GUESS lifted 0x5edf70: mismatch mem 0x161c3784 (heap): orig 001a0000 port 005a0000; mem 0x161c378c (heap): orig 001aee78 port 9cae0367
+0x6328b0  # inflate_trees_bits: mismatch mem 0xf9e9110 (heap): orig 004e0300 port 00000300; mem 0xf9e9128 (heap): orig 004e0400 port 00000400; mem 0xf9e9130 (heap): orig 004e0300 port 00000300
+0x64d490  # hunt 2026-10-22 19:45: ZViewBase::PrimInstanceEnter(ZPrimInstViewEntry*) (inline-casc-w2s88)
+0x453390  # hunt 2026-10-22 20:15: ZGATE::FindNeighborGate (inline-casc-w3f)
+0x659c40  # hunt 2026-10-22 20:33: ZDrawGC::UpdateBoneModifiers (inline-casc-w4d)
+
+# ---- shadow callee-this check (2026-10-22 20:30): wrong this passed to exe callees
+# shadow testing: cur verdict mismatch or crash, not in exclude_level2.txt (worklist.py, 3 functions)
+0x401510  # GUESS load codec setup: mismatch this of call 1 to 0x407ef0: orig 0x6f1e90 port 0x6b3d12a
+0x4216f0  # GUESS lifted 0x4216f0: mismatch this of call 1 to 0x41cfd0: orig 0xf86b6c0 port 0x0
+0x4e9380  # sphere vs triangle (guessed): mismatch this of call 1 to 0x4eb100: orig 0xf8b05f4 port stk
+0x469590  # hunt 2026-10-22 20:53: ZBaseConRout::DoEvent(int, int, void*) (inline-casc-w3b)
+# 0x575800  fixed in ports_next7: slot 0x114 pops 4, the pending push is the 3rd arg of slot 0x12c (was: hunt 2026-10-23 15:05: ZZoneMap::NextMap (inline-casc-s4))
+# 0x576a30  fixed in ports_next7: slot 0x114 pops 4, the pending 0 is the 3rd arg of slot 0x130 (was: hunt 2026-10-23 15:21: ZSubZoneMap::SetUpMap(const char*) (inline-casc-w3b))
+# 0x5e8d40  fixed in ports_next7: 12-byte iterator local for slots 0x4c/0x5c (overwrote the saved this) (was: hunt 2026-10-23 15:37: ZFFHeroMovementRaiseFlag::WantControl(const float*, const float*, const float*) (inline-herocombat-sh))
+0x604ca0  # hunt 2026-10-23 15:49: GUESS famG 0x604ca0 (inline-casc-w2; with it re-enabled the ports_next7 police-path run never opened the map (shadow exact, cause unknown)
+# 0x61a660  fixed in ports_next7: COM slot 0x11c declared stdcall (was cdecl) (was: hunt 2026-10-23 16:05: GUESS dispatch indexed key/value records (inline-casc-h2))
+0x401020  # hunt 2026-10-23 16:14: CRT helper 0x401020 (unknown) cdecl (inline-gap-401000; with it re-enabled the ports_next7 police-path run never opened the map (shadow exact, cause unknown)
+0x4102f0  # hunt 2026-10-23 16:34: free three and zero (unknown) cdecl (inline-gap-401000; with it re-enabled the ports_next7 police-path run never opened the map (shadow exact, cause unknown)
+0x5b76f0  # hunt 2026-10-23 16:50: ZFFHintBox::Init (inline-unclaimed-11; with it re-enabled the ports_next7 police-path run never opened the map (shadow exact, cause unknown)
+0x5bf550  # hunt 2026-10-23 17:06: ZCenter::Init (inline-casc-t1; with it re-enabled the ports_next7 police-path run never opened the map (shadow exact, cause unknown)
+0x5bdbf0  # hunt 2026-10-23 17:19: FUN_5bdbf0 (factory, vt 0x6b34b4) (inline-fresh-15; with it re-enabled the ports_next7 police-path run never opened the map (shadow exact, cause unknown)
+# 0x5c17c0  fixed in ports_next7: slot 0x114 pops 4, &loc and 0 are args 2 and 3 of slot 0x128 (was: hunt 2026-10-23 17:34: CEnemyFlag::Init2 (inline-casc-t8))
+# 0x5f0d30  fixed in ports_next7: the entry push ecx is the arg of sysobj slot 0x58; slot 0x130 takes 3 (was: hunt 2026-10-23 17:58: OpenWindow(unsigned int) (inline-casc-w3a))

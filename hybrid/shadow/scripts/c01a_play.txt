@@ -1,0 +1,375 @@
+# c01a_play.txt - shadow capture scenario: to_level1.txt up to control in mission C01A, then about 6 game
+# minutes of varied play (walk, strafe, turn, fire, aim, reload, crouch, use, weapon keys), generated with a
+# fixed seed. Written for a run with its own profile_dir (run_capture.py --fresh-profile): the overwrite
+# prompt then does not come up and the two presses meant for it fall on the autosave screen.
+
+wait_scene FF-Intro
+at 12 key ESCAPE
+at 13 log intro skipped
+wait_scene FF-Startup
+at 10 key RETURN
+at 11 log main menu: start
+at 20 key RETURN
+at 21 log profile: new
+at 30 key UP
+at 32 key UP
+at 36 key RETURN
+at 37 log difficulty: the easiest
+at 46 key RETURN
+at 47 log new game: start game with the default name
+at 56 key RIGHT
+at 58 key RETURN
+at 59 log overwrite prompt: yes
+wait_scene FF_MC01A_MAIN
+at 10 key ESCAPE
+at 11 log movie cut skipped
+
+wait_scene FF-C01A_MAIN
+at 20 log level: control
+at 22.0 key R
+at 23.5 mouse 300 40
+at 24.5 down W
+at 27.0 up W
+at 27.5 down A
+at 29.0 up A
+at 29.5 key R
+at 31.0 down S
+at 32.5 up S
+at 33.0 down W
+at 35.5 up W
+at 36.0 key 2
+at 37.0 down W
+at 39.5 up W
+at 40.0 down D
+at 41.5 up D
+at 42.0 key C
+at 43.0 down A
+at 44.5 up A
+at 45.0 down D
+at 46.5 up D
+at 47.0 down W
+at 49.5 up W
+at 50.0 down S
+at 51.5 up S
+at 52.0 down A
+at 53.5 up A
+at 54.0 down S
+at 55.5 up S
+at 56.0 down W
+at 58.5 up W
+at 59.0 down S
+at 60.5 up S
+at 61.0 down S
+at 62.5 up S
+at 63.0 key C
+at 64.0 down W
+at 66.5 up W
+at 67.0 click left
+at 67.6 key 2
+at 68.6 click right
+at 69.6 key C
+at 70.6 mouse -300 40
+at 71.6 click right
+at 72.6 key 2
+at 73.6 down A
+at 75.1 up A
+at 75.6 key R
+at 77.1 down A
+at 78.6 up A
+at 79.1 down S
+at 80.6 up S
+at 81.1 down W
+at 83.6 up W
+at 84.1 down S
+at 85.6 up S
+at 86.1 click left
+at 86.7 click left
+at 87.3 click left
+at 87.9 click left
+at 88.5 key 4
+at 89.5 key R
+at 91.0 key E
+at 92.0 down S
+at 93.5 up S
+at 94.0 key E
+at 95.0 key R
+at 96.5 click right
+at 97.5 click left
+at 98.1 click left
+at 98.7 click left
+at 99.3 down S
+at 100.8 up S
+at 101.3 click right
+at 102.3 key 4
+at 103.3 key R
+at 104.8 key E
+at 105.8 click right
+at 106.8 down S
+at 108.3 up S
+at 108.8 down A
+at 110.3 up A
+at 110.8 key 4
+at 111.8 mouse 150 -40
+at 112.8 key E
+at 113.8 key C
+at 114.8 down W
+at 117.3 up W
+at 117.8 down D
+at 119.3 up D
+at 119.8 key R
+at 121.3 key R
+at 122.8 down S
+at 124.3 up S
+at 124.8 key E
+at 125.8 down S
+at 127.3 up S
+at 127.8 key E
+at 128.8 down A
+at 130.3 up A
+at 130.8 click right
+at 131.8 key E
+at 132.8 down A
+at 134.3 up A
+at 134.8 click right
+at 135.8 down S
+at 137.3 up S
+at 137.8 key E
+at 138.8 click right
+at 139.8 key C
+at 140.8 key R
+at 142.3 down W
+at 144.8 up W
+at 145.3 key E
+at 146.3 key R
+at 147.8 mouse -300 0
+at 148.8 down W
+at 151.3 up W
+at 151.8 click left
+at 152.4 click left
+at 153.0 click left
+at 153.6 mouse -150 0
+at 154.6 key C
+at 155.6 key E
+at 156.6 down A
+at 158.1 up A
+at 158.6 key E
+at 159.6 key C
+at 160.6 key 3
+at 161.6 mouse 300 40
+at 162.6 click right
+at 163.6 key C
+at 164.6 key R
+at 166.1 key C
+at 167.1 click left
+at 167.7 click left
+at 168.3 down A
+at 169.8 up A
+at 170.3 mouse -150 40
+at 171.3 click left
+at 171.9 key E
+at 172.9 down S
+at 174.4 up S
+at 174.9 mouse 150 0
+at 175.9 down W
+at 178.4 up W
+at 178.9 mouse 300 40
+at 179.9 key R
+at 181.4 down S
+at 182.9 up S
+at 183.4 down S
+at 184.9 up S
+at 185.4 key R
+at 186.9 mouse -300 0
+at 187.9 key 4
+at 188.9 key C
+at 189.9 key C
+at 190.9 key C
+at 191.9 down D
+at 193.4 up D
+at 193.9 key C
+at 194.9 down W
+at 197.4 up W
+at 197.9 click left
+at 198.5 click left
+at 199.1 click left
+at 199.7 click left
+at 200.3 click left
+at 200.9 mouse -300 0
+at 201.9 down S
+at 203.4 up S
+at 203.9 down W
+at 206.4 up W
+at 206.9 down A
+at 208.4 up A
+at 208.9 down S
+at 210.4 up S
+at 210.9 mouse -300 0
+at 211.9 down S
+at 213.4 up S
+at 213.9 down W
+at 216.4 up W
+at 216.9 down A
+at 218.4 up A
+at 218.9 down S
+at 220.4 up S
+at 220.9 key C
+at 221.9 mouse 150 0
+at 222.9 down S
+at 224.4 up S
+at 224.9 key R
+at 226.4 key E
+at 227.4 down A
+at 228.9 up A
+at 229.4 key E
+at 230.4 key E
+at 231.4 key E
+at 232.4 key E
+at 233.4 click right
+at 234.4 down A
+at 235.9 up A
+at 236.4 down D
+at 237.9 up D
+at 238.4 click right
+at 239.4 key E
+at 240.4 mouse -300 -40
+at 241.4 key 3
+at 242.4 mouse -300 40
+at 243.4 click right
+at 244.4 down D
+at 245.9 up D
+at 246.4 key 3
+at 247.4 mouse 150 -40
+at 248.4 key 3
+at 249.4 click left
+at 250.0 click left
+at 250.6 click left
+at 251.2 click left
+at 251.8 click left
+at 252.4 click left
+at 253.0 click left
+at 253.6 click left
+at 254.2 key 4
+at 255.2 key R
+at 256.7 down W
+at 259.2 up W
+at 259.7 down W
+at 262.2 up W
+at 262.7 click right
+at 263.7 key E
+at 264.7 click right
+at 265.7 click left
+at 266.3 click left
+at 266.9 click left
+at 267.5 key E
+at 268.5 key R
+at 270.0 key R
+at 271.5 down A
+at 273.0 up A
+at 273.5 down A
+at 275.0 up A
+at 275.5 key E
+at 276.5 click left
+at 277.1 click left
+at 277.7 click left
+at 278.3 click left
+at 278.9 click left
+at 279.5 click left
+at 280.1 click left
+at 280.7 down S
+at 282.2 up S
+at 282.7 down S
+at 284.2 up S
+at 284.7 down W
+at 287.2 up W
+at 287.7 key E
+at 288.7 key R
+at 290.2 down A
+at 291.7 up A
+at 292.2 key C
+at 293.2 click left
+at 293.8 click left
+at 294.4 click left
+at 295.0 click left
+at 295.6 mouse 300 40
+at 296.6 key R
+at 298.1 down D
+at 299.6 up D
+at 300.1 key E
+at 301.1 key C
+at 302.1 down A
+at 303.6 up A
+at 304.1 mouse -150 -40
+at 305.1 mouse 300 40
+at 306.1 mouse 300 40
+at 307.1 key R
+at 308.6 mouse -150 -40
+at 309.6 down W
+at 312.1 up W
+at 312.6 down A
+at 314.1 up A
+at 314.6 key C
+at 315.6 click left
+at 316.2 click left
+at 316.8 down W
+at 319.3 up W
+at 319.8 click right
+at 320.8 click left
+at 321.4 click left
+at 322.0 click left
+at 322.6 key 2
+at 323.6 down S
+at 325.1 up S
+at 325.6 key R
+at 327.1 click right
+at 328.1 key 4
+at 329.1 mouse -300 40
+at 330.1 key R
+at 331.6 key E
+at 332.6 down S
+at 334.1 up S
+at 334.6 key 4
+at 335.6 key 2
+at 336.6 key 2
+at 337.6 key 1
+at 338.6 key E
+at 339.6 mouse -300 -40
+at 340.6 mouse -150 0
+at 341.6 down S
+at 343.1 up S
+at 343.6 down A
+at 345.1 up A
+at 345.6 key R
+at 347.1 key 4
+at 348.1 down A
+at 349.6 up A
+at 350.1 click left
+at 350.7 click left
+at 351.3 click right
+at 352.3 down W
+at 354.8 up W
+at 355.3 down D
+at 356.8 up D
+at 357.3 key 1
+at 358.3 down D
+at 359.8 up D
+at 360.3 key R
+at 361.8 down S
+at 363.3 up S
+at 363.8 key 2
+at 364.8 click right
+at 365.8 key E
+at 366.8 key 4
+at 367.8 key 2
+at 368.8 key 3
+at 369.8 key 2
+at 370.8 key E
+at 371.8 mouse 300 -40
+at 372.8 key C
+at 373.8 key E
+at 374.8 key R
+at 376.3 down A
+at 377.8 up A
+at 378.3 key C
+at 379.3 down A
+at 380.8 up A
+at 383.3 log play done

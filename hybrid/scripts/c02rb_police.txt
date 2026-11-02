@@ -1,0 +1,499 @@
+# c02rb_police.txt - recorded 2026-10-23 by hand in vanilla (game/record_path.cmd, loader input_record) from
+# game/profile_rec (save after mission 1): menu Continue, C02RB hideout, the city map, police station, enter the
+# mission C02B, about 28 s of play, back to the menu. Replay with --profile-src game/profile_rec.
+# Removed by hand: the wait for Singleplayer/C02RB/Loader.ZIP (open for ~150 ms before FF-C02RB_MAIN, a replay
+# may never poll inside it) and its one mouse move.
+
+wait_scene FF-Intro.ZIP
+# recorded: ESC at 1.742, 6.886, 7.872; a replay on the fixed_step clock ignored all three, so one ESC at 12
+# as in to_level1.txt
+at 12 key ESCAPE
+
+wait_scene FF-Startup.ZIP
+# recorded: one mouse click on the main menu; replayed it missed, so the keyboard path of
+# shadow/scripts/c02rb_hub.txt: START, profile screen RIGHT (LOAD), RETURN, RETURN on the save
+at 10 key RETURN
+at 20 key RIGHT
+at 24 key RETURN
+at 40 key RETURN
+
+wait_scene SinglePlayer/C02RB/FF-C02RB_MAIN.ZIP
+# shifted +5 s by hand: replayed, the recorded times came before the player had control
+# camera mouse moves before E restored (a run without them walked past the map table)
+# the last W step held 1.5 s longer: the replayed walk stops short of the map table, and the table stops an overshoot
+# then D 1.05 s added by hand: the walk ends north-west of the table, which is to the right
+# between the 2nd and 3rd click (enter location) the recorded moves are replaced: the cursor is clamped into the
+# bottom-left corner, then small steps to the button (large per-frame deltas do not replay one to one)
+at 5.717 mouse -7 11
+at 5.782 mouse -20 47
+at 5.847 mouse -9 59
+at 5.897 mouse 2 38
+at 5.962 mouse 2 11
+at 6.028 mouse 0 1
+at 6.061 down 0x20
+at 6.276 down 0x11
+at 6.489 up 0x20
+at 6.719 down 0x20
+at 6.802 up 0x20
+at 7.326 mouse -4 0
+at 7.392 mouse -54 0
+at 7.457 mouse -37 0
+at 7.490 mouse -17 0
+at 7.490 up 0x11
+at 7.540 mouse -53 0
+at 7.605 mouse -6 0
+at 7.671 mouse -55 -2
+at 7.736 mouse -6 -1
+at 7.818 down 0x11
+at 9.450 up 0x11
+at 9.500 down 0x20
+at 10.550 up 0x20
+at 10.616 down 0x12
+at 10.715 up 0x12
+at 11.158 mouse -20 0
+at 11.223 mouse 103 -16
+at 11.289 mouse 250 -70
+at 11.354 mouse 140 -61
+at 11.420 mouse 118 -74
+at 11.485 mouse 42 -10
+at 11.551 mouse 9 -2
+at 12.009 mouse 37 5
+at 12.075 mouse 35 38
+at 12.140 mouse 3 6
+at 12.271 mouse 0 -4
+at 12.337 mouse -2 -10
+at 12.402 mdown left
+at 12.533 mup left
+at 12.861 mouse -29 -6
+at 12.926 mouse -2 -1
+at 14.171 mdown left
+at 14.335 mup left
+at 16.090 mouse -300 300
+at 16.140 mouse -300 300
+at 16.190 mouse -300 300
+at 16.240 mouse -300 300
+at 16.290 mouse -300 300
+at 16.340 mouse -300 300
+at 16.390 mouse -300 300
+at 16.440 mouse -300 300
+at 16.490 mouse -300 300
+at 16.540 mouse -300 300
+at 16.690 mouse 34 -10
+at 16.740 mouse 34 -10
+at 16.790 mouse 34 -10
+at 16.840 mouse 34 -10
+at 16.890 mouse 34 -10
+at 16.940 mouse 34 -10
+at 16.990 mouse 34 -10
+at 17.040 mouse 34 -10
+at 17.090 mouse 34 -10
+at 17.140 mouse 34 -10
+at 17.290 mdown left
+at 17.438 mup left
+
+wait_scene SinglePlayer/C02B/FF-C02B_MAIN.ZIP
+# shifted +5 s by hand: replayed, the recorded times came before the player had control
+at 5.217 mouse 17 -17
+at 5.282 mouse 231 -184
+at 5.348 mouse 263 -170
+at 5.413 mouse 90 -50
+at 5.479 mouse 5 -3
+at 5.544 mouse -1 0
+at 5.610 mouse -24 21
+at 5.675 mouse -29 25
+at 5.725 mouse -10 11
+at 5.790 mouse -14 27
+at 5.856 mouse -9 37
+at 5.921 mouse -14 40
+at 5.987 mouse -37 63
+at 6.052 mouse -62 65
+at 6.117 mouse -59 43
+at 6.167 mouse -59 44
+at 6.232 mouse -51 39
+at 6.298 mouse -9 6
+at 6.363 mouse -14 2
+at 6.429 mouse -43 -10
+at 6.494 mouse -40 -44
+at 6.560 mouse -23 -22
+at 6.625 mouse -1 0
+at 6.690 mouse -6 -6
+at 6.740 mouse -8 -7
+at 6.805 mouse -1 0
+at 7.395 mouse 9 -12
+at 7.444 mouse 9 -10
+at 7.444 down 0x11
+at 7.510 mouse 11 -9
+at 7.575 mouse 1 -3
+at 7.641 down 0x1e
+at 7.904 mouse -2 0
+at 7.904 up 0x1e
+at 7.970 mouse -23 -4
+at 7.987 down 0x20
+at 8.053 mouse -45 -9
+at 8.087 mouse -4 -1
+at 8.087 up 0x20
+at 8.120 mouse -4 -1
+at 8.120 up 0x11
+at 8.185 mouse -3 0
+at 8.235 mouse -11 -2
+at 8.300 mouse -10 -2
+at 8.366 mouse -5 -3
+at 8.562 mouse 16 -21
+at 8.627 mouse 18 -10
+at 8.644 mdown right
+at 8.775 mouse 1 0
+at 8.775 down 0x1f
+at 8.906 mouse -10 12
+at 8.972 mouse -3 11
+at 9.037 mouse 3 0
+at 9.103 mouse 5 1
+at 9.168 mouse 0 7
+at 9.168 mdown left
+at 9.234 mouse -14 16
+at 9.283 mouse -2 2
+at 9.283 mup left
+at 9.333 mouse -12 8
+at 9.383 mouse -22 18
+at 9.433 mouse -7 6
+at 9.484 mdown left
+at 9.534 mouse -10 2
+at 9.584 mouse -16 -16
+at 9.601 mouse -10 -19
+at 9.601 mup left
+at 9.653 mouse -16 -29
+at 9.670 up 0x1f
+at 9.670 mouse 0 -1
+at 9.670 mdown left
+at 9.801 mouse 3 0
+at 9.801 down 0x20
+at 9.802 mup left
+at 9.933 mouse -33 0
+at 9.933 down 0x11
+at 9.983 mouse -82 -10
+at 9.999 up 0x20
+at 10.049 mouse -12 -3
+at 10.114 mouse -5 -2
+at 10.163 mouse -1 0
+at 10.163 mup right
+at 10.360 mouse -4 0
+at 10.425 mouse -16 -2
+at 10.491 mouse -46 10
+at 10.541 mouse -45 15
+at 10.591 mouse -5 1
+at 10.809 down 0x20
+at 11.005 mouse 30 -3
+at 11.071 mouse 24 -1
+at 11.071 up 0x20
+at 11.121 mouse 43 -3
+at 11.187 mouse 23 0
+at 11.252 mouse 1 0
+at 11.351 down 0x39
+at 11.368 up 0x11
+at 11.483 up 0x39
+at 11.663 mouse -1 6
+at 11.958 down 0x1f
+at 12.089 mouse 12 -1
+at 12.155 mouse 2 0
+at 12.302 down 0x39
+at 12.450 up 0x39
+at 12.762 mouse 120 4
+at 12.811 mouse 140 2
+at 12.811 up 0x1f
+at 12.828 mouse 69 1
+at 12.828 down 0x20
+at 12.894 mouse 183 12
+at 12.959 mouse 148 -13
+at 13.025 mouse 57 -2
+at 13.025 down 0x11
+at 13.075 mouse 2 0
+at 13.075 up 0x20
+at 13.191 mouse -3 -1
+at 13.207 down 0x1e
+at 13.257 mouse -45 -14
+at 13.322 mouse -62 -12
+at 13.388 mouse -20 -3
+at 13.453 mouse 0 -1
+at 13.650 mouse 5 6
+at 13.715 mouse 36 33
+at 13.767 mouse 19 15
+at 13.767 up 0x1e
+at 13.819 mouse 28 8
+at 13.869 mouse 19 1
+at 13.934 mouse 2 0
+at 13.984 mouse 4 0
+at 14.001 down 0x1e
+at 14.066 mouse 21 -4
+at 14.132 mouse 46 -1
+at 14.197 mouse 102 7
+at 14.247 mouse 95 0
+at 14.247 up 0x11
+at 14.247 up 0x1e
+at 14.280 mouse 107 -3
+at 14.280 down 0x20
+at 14.331 mouse 164 6
+at 14.396 mouse 65 1
+at 14.446 mouse 12 -1
+at 14.446 down 0x11
+at 14.496 mouse 7 -1
+at 14.496 up 0x20
+at 14.611 mouse -7 -1
+at 14.677 mouse -15 -2
+at 14.693 down 0x1e
+at 14.743 mouse -5 -1
+at 14.808 mouse -32 -16
+at 14.874 mouse -6 -2
+at 15.185 up 0x1e
+at 15.906 down 0x1e
+at 16.136 up 0x1e
+at 16.400 up 0x11
+at 16.596 mouse -1 -2
+at 16.662 mouse -20 -26
+at 16.711 mouse 0 -1
+at 16.711 down 0x11
+at 16.826 mouse 5 -7
+at 16.892 mouse 9 -3
+at 16.957 mouse 23 -4
+at 17.023 mouse 13 1
+at 17.088 mouse 48 9
+at 17.105 down 0x1e
+at 17.171 mouse 74 1
+at 17.236 mouse 21 0
+at 17.979 mouse 3 0
+at 18.029 mouse 13 3
+at 18.079 mouse 25 0
+at 18.129 mouse 24 -7
+at 18.179 mouse 4 0
+at 18.246 up 0x1e
+at 18.296 up 0x11
+at 18.411 mouse -103 0
+at 18.477 mouse -189 -6
+at 18.542 mouse -109 -9
+at 18.559 down 0x11
+at 18.609 mouse -76 -12
+at 18.674 mouse -55 -7
+at 18.740 mouse -34 -2
+at 18.756 down 0x20
+at 18.806 mouse -3 0
+at 18.871 mouse -1 0
+at 19.002 mouse 0 4
+at 19.020 up 0x20
+at 19.071 mouse 0 5
+at 19.121 mouse 0 4
+at 19.187 mouse 4 11
+at 19.237 mouse 1 2
+at 19.237 up 0x11
+at 19.302 mouse 1 1
+at 19.434 down 0x1e
+at 19.533 mdown right
+at 19.713 mouse 9 -22
+at 19.779 mouse 6 -15
+at 19.795 down 0x1f
+at 19.845 mouse 3 -24
+at 19.910 mouse -1 -33
+at 19.976 mouse 0 -16
+at 19.976 up 0x1e
+at 20.042 mouse 0 -9
+at 20.108 down 0x20
+at 20.305 up 0x1f
+at 20.371 mup right
+at 20.436 mouse 3 0
+at 20.486 mouse 71 18
+at 20.519 mouse 30 7
+at 20.519 down 0x11
+at 20.584 mouse 119 11
+at 20.601 up 0x20
+at 20.634 mouse 35 1
+at 20.634 down 0x1e
+at 20.684 mouse 21 2
+at 20.815 mouse 40 -6
+at 20.880 mouse 55 -12
+at 20.946 mouse 6 -1
+at 21.011 mouse 31 -3
+at 21.077 mouse 58 2
+at 21.142 mouse 4 1
+at 21.192 mouse 2 0
+at 21.242 mouse 3 0
+at 21.292 mouse 5 0
+at 21.342 mouse 8 2
+at 21.342 up 0x1e
+at 21.457 mouse 4 0
+at 21.523 mouse 12 1
+at 21.719 mouse -39 1
+at 21.719 mdown right
+at 21.768 mouse -30 1
+at 21.768 up 0x11
+at 21.818 mouse -13 0
+at 21.883 mouse -5 -2
+at 21.949 mouse -10 -10
+at 22.014 mouse -29 -17
+at 22.080 mouse -6 -3
+at 22.080 mdown left
+at 22.178 mup left
+at 22.244 mdown left
+at 22.309 mouse -4 4
+at 22.342 mouse -1 0
+at 22.342 mup left
+at 22.391 mouse -19 6
+at 22.391 mdown left
+at 22.456 mouse -65 18
+at 22.505 mouse -17 0
+at 22.505 mup left
+at 22.555 mouse -13 -2
+at 22.555 mdown left
+at 22.620 mouse -8 0
+at 22.669 mup left
+at 22.718 mdown left
+at 22.752 mouse -3 1
+at 22.752 down 0x1f
+at 22.752 down 0x20
+at 22.817 mouse -7 3
+at 22.834 mup left
+at 22.883 mouse -2 0
+at 22.883 mdown left
+at 22.948 mouse -18 5
+at 22.998 mup left
+at 23.130 mup right
+at 23.450 up 0x1f
+at 23.532 down 0x1f
+at 23.681 up 0x20
+at 24.025 down 0x13
+at 24.174 up 0x1f
+at 24.174 up 0x13
+at 24.453 mouse -1 0
+at 24.453 down 0x20
+at 24.469 mouse -15 0
+at 24.469 down 0x11
+at 24.519 mouse -70 -2
+at 24.584 mouse -31 2
+at 24.732 up 0x20
+at 24.864 down 0x1e
+at 24.979 mouse 6 0
+at 25.061 up 0x1e
+at 25.373 mouse -21 0
+at 25.438 mouse -59 -1
+at 25.504 mouse -40 -2
+at 25.537 mouse -6 0
+at 25.537 down 0x20
+at 25.603 mouse -46 -5
+at 25.668 mouse -43 -1
+at 25.733 mouse -42 -1
+at 25.783 mouse -25 0
+at 25.849 mouse -9 0
+at 25.849 up 0x11
+at 25.849 up 0x20
+at 25.914 mouse -26 -1
+at 25.964 mouse -13 3
+at 26.029 mouse -1 0
+at 26.587 down 0x01
+at 26.686 up 0x01
+at 26.931 mouse -28 0
+at 26.981 mouse -61 -8
+at 27.046 mouse -152 -23
+at 27.097 mouse -178 -46
+at 27.147 mouse -203 -120
+at 27.212 mouse -265 -171
+at 27.278 mouse -157 -94
+at 27.343 mouse 93 -105
+at 27.409 mouse 399 -217
+at 27.474 mouse 329 -27
+at 27.540 mouse 194 11
+at 27.605 mouse 136 52
+at 27.671 mouse 83 57
+at 27.736 mouse 25 34
+at 27.802 mouse 37 40
+at 27.867 mouse 90 85
+at 27.933 mouse 21 20
+at 27.998 mouse -15 21
+at 28.064 mouse -31 3
+at 28.129 mouse -27 -5
+at 28.195 mouse 0 -1
+at 28.260 mouse 5 -22
+at 28.311 mouse 1 -1
+at 28.376 mouse 2 -1
+at 28.442 mouse 2 -1
+at 28.507 mouse 7 -2
+at 28.573 mouse 0 -1
+at 29.961 mdown left
+at 30.092 mup left
+at 30.420 mouse -12 0
+at 30.485 mouse -16 -2
+at 30.551 mouse -1 0
+at 30.616 mouse -13 5
+at 30.682 mouse -17 6
+at 30.747 mouse -11 6
+at 30.812 mouse -37 24
+at 30.862 mouse -32 23
+at 30.927 mouse -33 21
+at 30.993 mouse -38 8
+at 31.058 mouse -16 2
+at 31.124 mouse -83 13
+at 31.189 mouse -183 153
+at 31.255 mouse -137 112
+at 31.320 mouse -4 10
+at 31.386 mouse 7 10
+at 31.451 mouse 16 25
+at 31.517 mouse 15 7
+at 31.582 mouse 34 -3
+at 31.648 mouse 47 -43
+at 31.713 mouse 13 -129
+at 31.779 mouse 24 -119
+at 31.844 mouse 11 -18
+at 31.910 mouse 7 -11
+at 31.975 mouse 2 -3
+at 32.041 mouse 5 -6
+at 32.237 mouse -3 0
+at 32.303 mouse -5 0
+at 32.368 mouse -2 -2
+at 32.565 mouse -4 -1
+at 32.630 mouse -14 -7
+at 32.696 mouse -7 -2
+at 32.761 mouse -13 0
+at 32.794 mouse -1 0
+at 32.794 mdown left
+at 32.941 mup left
+
+wait_scene FF-Startup.ZIP
+at 0.062 mouse -6 32
+at 0.127 mouse 56 47
+at 0.193 mouse 119 26
+at 0.258 mouse 12 11
+at 0.324 mouse -8 9
+at 0.389 mouse -5 9
+at 0.455 mouse -14 14
+at 0.520 mouse -16 53
+at 0.586 mouse -36 88
+at 0.651 mouse -1 -28
+at 0.717 mouse 9 -122
+at 0.782 mouse 130 -157
+at 0.848 mouse 271 -126
+at 0.913 mouse 139 -59
+at 0.979 mouse 7 -6
+at 1.044 mouse 5 22
+at 1.110 mouse -44 68
+at 1.161 mouse -43 21
+at 1.211 mouse -37 9
+at 1.277 mouse -56 -2
+at 1.342 mouse -47 -8
+at 1.392 mouse -5 -3
+at 1.523 mdown left
+at 1.654 mouse -1 0
+at 1.654 mup left
+at 1.900 mouse -35 21
+at 1.965 mouse -63 43
+at 2.030 mouse -42 23
+at 2.211 mouse -4 7
+at 2.276 mouse -2 2
+at 2.342 mouse 0 1
+at 2.407 mouse -1 5
+at 2.538 mouse 0 1
+at 2.735 mouse -57 -5
+at 2.800 mouse -58 -7
+at 2.866 mouse -17 -1
+at 2.931 mouse -7 -1
+at 3.111 mdown left
+at 3.177 mouse -1 0
+at 3.243 mouse -7 1
+at 3.275 mup left
+at 3.472 mouse -5 -3
+at 3.554 mdown left
+at 3.685 mup left

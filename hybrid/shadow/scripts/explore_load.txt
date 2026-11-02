@@ -1,0 +1,32 @@
+# explore_load.txt - find the menu path from the main menu to the next mission with a loaded profile (frames only).
+# Profile screen items run left to right: NEW* LOAD DELETE. LOAD + RETURN starts the save: the C02RB hideout with
+# the city map ("to enter a location, walk to the map and press E"); an NPC talks for the first seconds.
+wait_scene FF-Intro
+at 12 key ESCAPE
+wait_scene FF-Startup
+at 10 key RETURN
+at 20 key RIGHT
+at 24 key RETURN
+at 40 key RETURN
+at 41 log save started
+wait_scene FF-C02RB_MAIN
+at 40 log dialogue over?
+at 40 down W
+at 40.6 up W
+at 42 key E
+at 43 log e1
+at 48 down W
+at 48.6 up W
+at 50 key E
+at 51 log e2
+at 56 mouse -150 0
+at 58 key E
+at 59 log e3
+at 64 mouse 300 0
+at 66 key E
+at 67 log e4
+at 72 down S
+at 72.5 up S
+at 74 key E
+at 75 log e5
+at 100 log explore done
